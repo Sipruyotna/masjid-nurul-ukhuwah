@@ -6,20 +6,20 @@
     <title>Masjid Nurul Ukhuwah — Donan, Cilacap Tengah</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
-        body { line-height: 1.8; color: #333; background: #f9f6f0; }
+        body { line-height: 1.6; color: #333; background: #f9f6f0; }
         
-        /* === BAGIAN ATAS: VIDEO + ALAMAT — DIPERKECIL & MEPET PALING BAWAH === */
+        /* === BAGIAN ATAS: VIDEO + ALAMAT — DIKECIL & MEPET BAWAH === */
         .header-banner {
             position: relative;
             background: #1a5c38;
-            min-height: 200px;
+            min-height: 180px;
             display: flex;
             flex-direction: column;
-            justify-content: flex-end; /* DORONG SAMPAI PALING BAWAH! */
+            justify-content: flex-end;
             align-items: center;
             color: white;
             text-align: center;
-            padding: 0 5px 2px 5px; /* ATAS:0, BAWAH:2 — SANGAT MEPET! */
+            padding: 0 5px 2px 5px;
             overflow: hidden;
         }
         .header-banner video {
@@ -36,20 +36,20 @@
         .header-banner .alamat-masjid {
             position: relative;
             z-index: 2;
-            font-size: 11px; /* ← TULISAN DIKECILKAN! */
-            line-height: 1.3; /* ← JARAK BARIS DIPERKECIL */
+            font-size: 11px;
+            line-height: 1.3;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
             background: rgba(0,0,0,0.4);
-            padding: 2px 8px; /* ← JARAK DALAM DIPERKECIL */
+            padding: 2px 8px;
             border-radius: 3px;
             max-width: 95%;
-            margin-bottom: 0; /* ← TIDAK ADA JARAK BAWAH — MEPET! */
+            margin-bottom: 0;
         }
         
         /* === MENU NAVIGASI === */
         nav {
             background: #2d7a50;
-            padding: 10px 5px;
+            padding: 8px 5px;
             position: sticky;
             top: 0;
             z-index: 100;
@@ -57,86 +57,88 @@
         }
         nav a {
             color: white;
-            margin: 0 12px;
+            margin: 0 8px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 16px;
+            font-size: 15px;
             display: inline-block;
-            padding: 4px 6px;
+            padding: 3px 5px;
         }
         nav a:hover { text-decoration: underline; }
         
         /* === ISI HALAMAN === */
-        section { padding: 20px 15px; max-width: 800px; margin: 0 auto; }
-        h2 { color: #1a5c38; margin-bottom: 15px; border-bottom: 2px solid #ddd; padding-bottom: 5px; font-size: 22px; }
-        .hero { background: #e8f5ed; padding: 25px 15px; text-align: center; border-radius: 10px; margin-bottom: 25px; }
-        .hero h1 { color: #1a5c38; margin-bottom: 10px; font-size: 24px; }
-        .info-box { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 25px; }
-        .kegiatan-item { margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px dashed #ddd; }
+        section { padding: 15px 12px; max-width: 780px; margin: 0 auto; }
+        h2 { color: #1a5c38; margin-bottom: 12px; border-bottom: 2px solid #ddd; padding-bottom: 4px; font-size: 20px; }
+        .hero { background: #e8f5ed; padding: 20px 12px; text-align: center; border-radius: 10px; margin-bottom: 20px; }
+        .hero h1 { color: #1a5c38; margin-bottom: 8px; font-size: 22px; }
+        .info-box { background: white; padding: 15px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px; font-size: 15px; }
+        .kegiatan-item { margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px dashed #ddd; }
         .kegiatan-item:last-child { border-bottom: none; }
-        .kegiatan-item strong { font-size: 17px; color: #1a5c38; }
+        .kegiatan-item strong { font-size: 16px; color: #1a5c38; }
         
         /* === FOTO & VIDEO KEGIATAN === */
         .foto-kegiatan {
             width: 100%;
-            max-width: 400px;
+            max-width: 380px;
             border-radius: 8px;
-            margin-top: 10px;
+            margin-top: 8px;
             margin-bottom: 5px;
             box-shadow: 0 2px 6px rgba(0,0,0,0.15);
         }
         .video-kegiatan {
             width: 100%;
-            max-width: 480px;
+            max-width: 460px;
             border-radius: 8px;
-            margin-top: 12px;
-            margin-bottom: 8px;
+            margin-top: 10px;
+            margin-bottom: 6px;
             box-shadow: 0 2px 6px rgba(0,0,0,0.15);
             background: #000;
         }
         
-        /* === JADWAL SHOLAT — DALAM SATU KOTAK === */
+        /* ==================================================
+           ✅ JADWAL SHOLAT — DIPERKECIL & MUAT SEMUA!
+           ================================================== */
         .jadwal-sholat {
             background: linear-gradient(135deg, #e8f5ed 0%, #c8e6d0 100%);
-            padding: 25px;
-            border-radius: 12px;
+            padding: 15px; /* ← diperkecil jarak dalam */
+            border-radius: 10px;
             box-shadow: 0 3px 10px rgba(26, 92, 56, 0.15);
-            margin-top: 25px;
+            margin-top: 20px;
             border: 2px solid #1a5c38;
         }
         .jadwal-sholat h3 {
             color: #1a5c38;
             text-align: center;
-            font-size: 20px;
-            margin-bottom: 5px;
+            font-size: 17px; /* ← diperkecil judul */
+            margin-bottom: 4px;
         }
         .jadwal-sholat > p {
             text-align: center;
-            font-size: 13px;
+            font-size: 11px; /* ← diperkecil keterangan */
             color: #555;
-            margin-bottom: 18px;
+            margin-bottom: 12px;
         }
         .jadwal-grid {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 10px;
+            grid-template-columns: repeat(5, 1fr); /* ← 5 kolom tetap — Subuh sampai Isya */
+            gap: 6px; /* ← jarak antar kotak diperkecil */
             text-align: center;
         }
         .jadwal-box {
             background: white;
-            padding: 15px 8px;
-            border-radius: 10px;
+            padding: 10px 5px; /* ← jarak dalam kotak diperkecil */
+            border-radius: 8px;
             border: 2px solid #1a5c38;
             box-shadow: 0 2px 4px rgba(0,0,0,0.08);
         }
         .jadwal-box strong {
-            font-size: 17px;
+            font-size: 14px; /* ← nama sholat diperkecil */
             color: #1a5c38;
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 3px;
         }
         .jadwal-box span {
-            font-size: 18px;
+            font-size: 15px; /* ← waktu diperkecil */
             font-weight: bold;
             color: #333;
         }
@@ -146,29 +148,25 @@
             background: #1a5c38;
             color: white;
             text-align: center;
-            padding: 18px;
-            margin-top: 40px;
-            font-size: 14px;
+            padding: 15px;
+            margin-top: 30px;
+            font-size: 13px;
         }
         a { color: #1a5c38; }
-        ul { margin-left: 25px; margin-top: 8px; }
-        li { margin-bottom: 5px; }
+        ul { margin-left: 22px; margin-top: 6px; font-size: 15px; }
+        li { margin-bottom: 4px; }
     </style>
 </head>
 <body>
 
 <!-- ==============================================
-     BAGIAN ATAS: VIDEO + ALAMAT — DIKECIL & MEPET BAWAH
-     VIDEO ADA TOMBOL SUARA — TANPA NAMA MASJID DI ATAS
+     BAGIAN ATAS: VIDEO + ALAMAT — DIKECIL & MEPET
      ============================================== -->
 <div class="header-banner">
-    <!-- Video Latar — TOMBOL SUARA & PUTAR AKTIF! 🔊 -->
     <video loop playsinline controls>
         <source src="km_20220204_1080p(1).mp4" type="video/mp4">
         Maaf, peramban tidak mendukung video.
     </video>
-    
-    <!-- ALAMAT — DIKECILKAN & MEPET PALING BAWAH! -->
     <div class="alamat-masjid">
         📍 Jl. Kutilang Barat — RT 01 RW XI, Kelurahan Donan, Cilacap Tengah, Kab. Cilacap, Jawa Tengah — 53222
     </div>
@@ -185,7 +183,7 @@
 </nav>
 
 <!-- ==============================================
-     BERANDA — SELAMAT DATANG + JADWAL SHOLAT
+     BERANDA — JADWAL SHOLAT DIPERKECIL & MUAT SEMUA
      ============================================== -->
 <section id="beranda" class="hero">
     <h1>🕌 Masjid Nurul Ukhuwah</h1>
@@ -193,10 +191,10 @@
     <br>
     <p>Semoga masjid ini senantiasa menjadi rumah Allah yang diberkahi, tempat tegaknya sholat berjamaah, penyebaran ilmu yang bermanfaat, serta pusat kebaikan dan kerukunan antarwarga. 🤲</p>
     
-    <!-- JADWAL SHOLAT — DALAM SATU KOTAK BESAR -->
+    <!-- ✅ JADWAL SHOLAT — DIPERKECIL, 5 KOTAK MUAT SEMUA! -->
     <div class="jadwal-sholat">
-        <h3>🕌 Jadwal Sholat — Wilayah Cilacap Tengah</h3>
-        <p>* Waktu setempat — dapat berubah setiap hari sesuai matahari</p>
+        <h3>🕌 Jadwal Sholat — Cilacap Tengah</h3>
+        <p>* Waktu setempat — dapat berubah setiap hari</p>
         <div class="jadwal-grid">
             <div class="jadwal-box"><strong>Subuh</strong><span>04.32</span></div>
             <div class="jadwal-box"><strong>Dzuhur</strong><span>11.45</span></div>
@@ -241,7 +239,6 @@
     <h2>📚 Kegiatan Rutin</h2>
     <div class="info-box">
         
-        <!-- 1. BELAJAR AL-QUR'AN IBU-IBU -->
         <div class="kegiatan-item">
             <strong>📖 Belajar Al-Qur'an Ibu-ibu</strong><br>
             Bersama Ustadzah — Setiap Selasa & Jumat, Pukul 16.00 – 17.30 WIB
@@ -251,7 +248,6 @@
             </video>
         </div>
         
-        <!-- 2. PENGAJIAN BAPAK-BAPAK — MALAM KAMIS -->
         <div class="kegiatan-item">
             <strong>📝 Pengajian Bapak-bapak — Tahsinul Qur'an</strong><br>
             Setiap malam Kamis, setelah Maghrib – menjelang Isya. Bersama Ustadz
@@ -261,7 +257,6 @@
             </video>
         </div>
         
-        <!-- 3. PENGAJIAN UMUM BULANAN -->
         <div class="kegiatan-item">
             <strong>🌿 Pengajian Umum Bulanan</strong><br>
             Setiap Ahad minggu ketiga, setelah Ashar – menjelang Maghrib. Terbuka untuk seluruh jamaah, warga RW XI & sekitar. Bersama Ustadz/Ustadzah
@@ -271,25 +266,21 @@
             </video>
         </div>
         
-        <!-- 4. BACA AL-QUR'AN PROGRAM KATAM -->
         <div class="kegiatan-item">
             <strong>📖 Baca Al-Qur'an Program Katam</strong><br>
             Setiap Ahad, Pukul 09.00 – 10.00 WIB
         </div>
         
-        <!-- 5. SHOLAT JUMAT BERJAMAAH -->
         <div class="kegiatan-item">
             <strong>🕌 Sholat Jumat Berjamaah</strong><br>
             Setiap hari Jumat dengan Imam & Khatib
         </div>
         
-        <!-- 6. GERAK SHOLAT SUBUH BERJAMAAH -->
         <div class="kegiatan-item">
             <strong>✨ Gerak Sholat Subuh Berjamaah (GSSB)</strong><br>
             Setiap 10 minggu sekali, bergilir di masjid wilayah Donan. Bersama Ustadz
         </div>
         
-        <!-- 7. PENYALURAN PARCEL IDUL FITRI -->
         <div class="kegiatan-item">
             <strong>📦 Penyaluran Parcel Idul Fitri</strong><br>
             Berbagi kebahagiaan kepada warga sekitar — hasil infak jamaah
@@ -299,9 +290,8 @@
             </video>
         </div>
         
-        <hr style="border: 1px dashed #ddd; margin: 20px 0;">
+        <hr style="border: 1px dashed #ddd; margin: 15px 0;">
         
-        <!-- 8. BULAN RAMADHAN -->
         <div class="kegiatan-item">
             <strong>🌕 Bulan Ramadhan</strong><br>
             ✅ Sholat Tarawih & Kultum sebelum Subuh<br>
@@ -338,7 +328,6 @@
             </video>
         </div>
         
-        <!-- 9. IDUL ADHA — QURBAN -->
         <div class="kegiatan-item">
             <strong>🐑 Idul Adha — Qurban</strong><br>
             Menerima hewan qurban, menyembelih, mengolah, hingga membagikan daging kepada warga sekitar
@@ -350,7 +339,6 @@
             </p>
         </div>
         
-        <!-- 10. SHOLAT IDUL FITRI -->
         <div class="kegiatan-item">
             <strong>🕌 Sholat Idul Fitri</strong><br>
             Dilaksanakan secara berjamaah di masjid
