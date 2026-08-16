@@ -102,23 +102,40 @@
         .video-kegiatan { width: 100%; max-width: 480px; border-radius: 10px; margin-top: 10px; margin-bottom: 12px; box-shadow: 0 3px 8px rgba(0,0,0,0.15); background: #000; }
         .video-judul { font-size: 15px; font-weight: bold; color: #1a5c38; margin-top: 15px; margin-bottom: 5px; display: block; }
         
-        /* === JADWAL SHOLAT === */
+        /* === ✅ JADWAL SHOLAT — DALAM 1 KOTAK RAPI === */
         .jadwal-sholat {
             background: linear-gradient(135deg, #e8f5ed 0%, #c8e6d0 100%);
             padding: 20px; border-radius: 12px;
             box-shadow: 0 4px 12px rgba(26, 92, 56, 0.18);
             margin-top: 25px; border: 3px solid #1a5c38;
         }
-        .jadwal-sholat h3 { color: #1a5c38; text-align: center; font-size: 18px; margin-bottom: 5px; }
-        .jadwal-sholat > p { text-align: center; font-size: 12px; color: #555; margin-bottom: 15px; }
-        .jadwal-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; text-align: center; }
+        .jadwal-sholat h3 {
+            color: #1a5c38; text-align: center;
+            font-size: 18px; margin-bottom: 15px;
+        }
+        .jadwal-sholat > p {
+            text-align: center; font-size: 12px;
+            color: #555; margin-bottom: 15px;
+        }
+        .jadwal-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 8px; text-align: center;
+        }
         .jadwal-box {
             background: white; padding: 12px 5px; border-radius: 10px;
-            border: 2px solid #1a5c38; box-shadow: 0 3px 6px rgba(26, 92, 56, 0.15); transition: transform 0.2s;
+            border: 2px solid #1a5c38;
+            box-shadow: 0 3px 6px rgba(26, 92, 56, 0.15);
+            transition: transform 0.2s;
         }
         .jadwal-box:hover { transform: translateY(-2px); }
-        .jadwal-box strong { font-size: 15px; color: #1a5c38; display: block; margin-bottom: 5px; }
-        .jadwal-box span { font-size: 16px; font-weight: bold; color: #333; }
+        .jadwal-box strong {
+            font-size: 15px; color: #1a5c38;
+            display: block; margin-bottom: 5px;
+        }
+        .jadwal-box span {
+            font-size: 16px; font-weight: bold; color: #333;
+        }
         
         /* === KAKI HALAMAN === */
         footer { background: #145230; color: white; text-align: center; padding: 20px 15px; margin-top: 40px; font-size: 14px; }
@@ -127,6 +144,14 @@
         ul { margin-left: 25px; margin-top: 8px; font-size: 15px; }
         li { margin-bottom: 5px; }
         hr { border: none; border-top: 2px dashed #ccc; margin: 20px 0; }
+        
+        /* === TAMPILAN HP — JADWAL TETAP RAPI === */
+        @media (max-width: 600px) {
+            .jadwal-grid { grid-template-columns: repeat(5, 1fr); gap: 5px; }
+            .jadwal-box { padding: 10px 3px; }
+            .jadwal-box strong { font-size: 13px; }
+            .jadwal-box span { font-size: 14px; }
+        }
     </style>
 </head>
 <body>
@@ -136,7 +161,6 @@
      ============================================== -->
 <div class="top-header">
     <div class="logo-dkm">
-        <!-- ✅ LOGO SUDAH SESUAI NAMA FILE YANG DIUPLOAD -->
         <img src="file_000000007b9c6230abbe697983711c0d.png" alt="Logo DKM Nurul Ukhuwah">
     </div>
     <div class="header-text">
@@ -169,7 +193,7 @@
 </nav>
 
 <!-- ==============================================
-     BERANDA
+     BERANDA — JADWAL SHOLAT DI DALAM KOTAK
      ============================================== -->
 <section id="beranda">
     <div class="hero">
@@ -178,9 +202,9 @@
         <br>
         <p>Semoga masjid ini senantiasa menjadi rumah Allah yang diberkahi, tempat tegaknya sholat berjamaah, penyebaran ilmu yang bermanfaat, serta pusat kebaikan dan kerukunan antarwarga. 🤲</p>
         
-        <!-- JADWAL SHOLAT -->
+        <!-- ✅ JADWAL SHOLAT — KEMBALI KE 1 KOTAK RAPI! -->
         <div class="jadwal-sholat">
-            <h3>🕌 Jadwal Sholat — Cilacap Tengah</h3>
+            <h3>🕌 JADWAL SHOLAT — Cilacap Tengah</h3>
             <p>* Waktu setempat — dapat berubah setiap hari</p>
             <div class="jadwal-grid">
                 <div class="jadwal-box"><strong>Subuh</strong><span>04.32</span></div>
