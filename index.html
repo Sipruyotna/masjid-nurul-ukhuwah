@@ -94,13 +94,18 @@
             box-shadow: 0 2px 6px rgba(0,0,0,0.15);
             background: #000;
         }
+        .video-judul {
+            font-size: 14px;
+            font-weight: bold;
+            color: #1a5c38;
+            margin-top: 8px;
+            margin-bottom: 3px;
+        }
         
-        /* ==================================================
-           ✅ JADWAL SHOLAT — DIPERKECIL & MUAT SEMUA!
-           ================================================== */
+        /* === JADWAL SHOLAT — DIPERKECIL & MUAT SEMUA === */
         .jadwal-sholat {
             background: linear-gradient(135deg, #e8f5ed 0%, #c8e6d0 100%);
-            padding: 15px; /* ← diperkecil jarak dalam */
+            padding: 15px;
             border-radius: 10px;
             box-shadow: 0 3px 10px rgba(26, 92, 56, 0.15);
             margin-top: 20px;
@@ -109,36 +114,36 @@
         .jadwal-sholat h3 {
             color: #1a5c38;
             text-align: center;
-            font-size: 17px; /* ← diperkecil judul */
+            font-size: 17px;
             margin-bottom: 4px;
         }
         .jadwal-sholat > p {
             text-align: center;
-            font-size: 11px; /* ← diperkecil keterangan */
+            font-size: 11px;
             color: #555;
             margin-bottom: 12px;
         }
         .jadwal-grid {
             display: grid;
-            grid-template-columns: repeat(5, 1fr); /* ← 5 kolom tetap — Subuh sampai Isya */
-            gap: 6px; /* ← jarak antar kotak diperkecil */
+            grid-template-columns: repeat(5, 1fr);
+            gap: 6px;
             text-align: center;
         }
         .jadwal-box {
             background: white;
-            padding: 10px 5px; /* ← jarak dalam kotak diperkecil */
+            padding: 10px 5px;
             border-radius: 8px;
             border: 2px solid #1a5c38;
             box-shadow: 0 2px 4px rgba(0,0,0,0.08);
         }
         .jadwal-box strong {
-            font-size: 14px; /* ← nama sholat diperkecil */
+            font-size: 14px;
             color: #1a5c38;
             display: block;
             margin-bottom: 3px;
         }
         .jadwal-box span {
-            font-size: 15px; /* ← waktu diperkecil */
+            font-size: 15px;
             font-weight: bold;
             color: #333;
         }
@@ -183,7 +188,7 @@
 </nav>
 
 <!-- ==============================================
-     BERANDA — JADWAL SHOLAT DIPERKECIL & MUAT SEMUA
+     BERANDA
      ============================================== -->
 <section id="beranda" class="hero">
     <h1>🕌 Masjid Nurul Ukhuwah</h1>
@@ -191,7 +196,7 @@
     <br>
     <p>Semoga masjid ini senantiasa menjadi rumah Allah yang diberkahi, tempat tegaknya sholat berjamaah, penyebaran ilmu yang bermanfaat, serta pusat kebaikan dan kerukunan antarwarga. 🤲</p>
     
-    <!-- ✅ JADWAL SHOLAT — DIPERKECIL, 5 KOTAK MUAT SEMUA! -->
+    <!-- JADWAL SHOLAT — SUDAH DIPERKECIL & MUAT SEMUA -->
     <div class="jadwal-sholat">
         <h3>🕌 Jadwal Sholat — Cilacap Tengah</h3>
         <p>* Waktu setempat — dapat berubah setiap hari</p>
@@ -206,7 +211,7 @@
 </section>
 
 <!-- ==============================================
-     TENTANG MASJID
+     TENTANG MASJID — ✅ VIDEO PERBAIKAN TEMPAT PENYEMBELIHAN DIPINDAH KE SINI!
      ============================================== -->
 <section id="tentang">
     <h2>📖 Tentang Masjid</h2>
@@ -229,11 +234,18 @@
         <img src="IMG-20260816-WA0010(1).jpg" alt="Perbaikan Atap Masjid" class="foto-kegiatan">
         <p style="font-size:14px; color:#666; margin-top:5px;">Perbaikan atap bocor & pemeliharaan fasilitas masjid</p>
         <p style="margin-top:10px;"><a href="https://vt.tiktok.com/ZSVNTkbFc/" target="_blank">🎬 Klik di sini → Video Perbaikan Pengeras Suara Adzan</a></p>
+        
+        <!-- ✅ VIDEO PERBAIKAN TEMPAT PENYEMBELIHAN — DIPINDAH KE SINI + DIBERI JUDUL! -->
+        <p class="video-judul">🔧 Persiapan & Perbaikan Tempat Penyembelihan Hewan Qurban</p>
+        <video class="video-kegiatan" controls>
+            <source src="VID-20260816-WA0013.mp4" type="video/mp4">
+            Maaf, peramban tidak mendukung pemutaran video.
+        </video>
     </div>
 </section>
 
 <!-- ==============================================
-     KEGIATAN — DENGAN FOTO & VIDEO
+     KEGIATAN — ✅ VIDEO KULTUM SUBUH DIPINDAH + DIBERI JUDUL!
      ============================================== -->
 <section id="kegiatan">
     <h2>📚 Kegiatan Rutin</h2>
@@ -299,13 +311,17 @@
             ✅ Buka puasa bersama pengurus masjid<br>
             ✅ Sepuluh hari terakhir: Itikaf penuh di masjid
             <br><br>
-            <strong>🎥 Pengajian Ahad Ramadhan & Kultum Subuh:</strong><br>
-            <video class="video-kegiatan" controls>
-                <source src="VID-20260816-WA0005.mp4" type="video/mp4">
-                Maaf, peramban tidak mendukung pemutaran video.
-            </video>
+            
+            <!-- ✅ KULTUM SUBUH — DIPINDAH KE ATAS + DIBERI JUDUL! -->
+            <p class="video-judul">🎙️ Kultum Sebelum Sholat Subuh — Bulan Ramadhan</p>
             <video class="video-kegiatan" controls>
                 <source src="VID-20260816-WA0006.mp4" type="video/mp4">
+                Maaf, peramban tidak mendukung pemutaran video.
+            </video>
+            
+            <p class="video-judul">📖 Pengajian Umum Ahad Sore — Bulan Ramadhan</p>
+            <video class="video-kegiatan" controls>
+                <source src="VID-20260816-WA0005.mp4" type="video/mp4">
                 Maaf, peramban tidak mendukung pemutaran video.
             </video>
             <video class="video-kegiatan" controls>
@@ -348,7 +364,7 @@
 </section>
 
 <!-- ==============================================
-     KONTAK & DONASI — INFak KALENG DI SINI
+     KONTAK & DONASI
      ============================================== -->
 <section id="kontak">
     <h2>📞 Kontak & Informasi</h2>
