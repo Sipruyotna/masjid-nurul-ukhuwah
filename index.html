@@ -8,35 +8,33 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
         body { line-height: 1.6; color: #333; background: #f9f6f0; }
         
-        /* === HEADER DENGAN LOGO DKM === */
+        /* === HEADER — HANYA LOGO === */
         .top-header {
             background: linear-gradient(135deg, #145230 0%, #1a5c38 50%, #2d7a50 100%);
-            color: white;
-            padding: 15px 10px;
+            padding: 20px 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
         }
         .logo-dkm {
-            width: 70px;
-            height: 70px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             background: white;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.25);
             overflow: hidden;
-            border: 3px solid #d4a900;
+            border: 4px solid #d4a900;
         }
-        .logo-dkm img { width: 100%; height: 100%; object-fit: cover; }
-        .header-text { text-align: center; }
-        .header-text h1 { font-size: 22px; margin-bottom: 3px; text-shadow: 1px 1px 3px rgba(0,0,0,0.3); }
-        .header-text p { font-size: 13px; opacity: 0.9; }
+        .logo-dkm img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
         
-        /* === BAGIAN VIDEO + ALAMAT === */
+        /* === BANNER VIDEO + ALAMAT === */
         .header-banner {
             position: relative;
             background: #1a5c38;
@@ -47,7 +45,7 @@
             align-items: center;
             color: white;
             text-align: center;
-            padding: 0 5px 5px 5px;
+            padding: 0 5px 8px 5px;
             overflow: hidden;
         }
         .header-banner video {
@@ -58,27 +56,27 @@
             object-fit: cover;
             opacity: 0.4; z-index: 1;
         }
-        .header-banner .alamat-masjid {
+        .alamat-masjid {
             position: relative; z-index: 2;
             font-size: 12px; line-height: 1.4;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
             background: rgba(0,0,0,0.45);
-            padding: 4px 10px; border-radius: 5px;
-            max-width: 95%; margin-bottom: 0;
+            padding: 5px 12px; border-radius: 5px;
+            max-width: 95%;
         }
         
         /* === MENU NAVIGASI === */
         nav {
             background: #236b45;
-            padding: 10px 5px;
+            padding: 12px 5px;
             position: sticky; top: 0; z-index: 100;
             text-align: center;
             box-shadow: 0 2px 5px rgba(0,0,0,0.15);
         }
         nav a {
-            color: white; margin: 0 6px; text-decoration: none;
+            color: white; margin: 0 8px; text-decoration: none;
             font-weight: bold; font-size: 15px;
-            display: inline-block; padding: 4px 8px;
+            display: inline-block; padding: 5px 10px;
             border-radius: 4px; transition: background 0.3s;
         }
         nav a:hover { background: rgba(255,255,255,0.2); }
@@ -98,39 +96,41 @@
         .video-kegiatan { width: 100%; max-width: 480px; border-radius: 10px; margin-top: 10px; margin-bottom: 12px; box-shadow: 0 3px 8px rgba(0,0,0,0.15); background: #000; }
         .video-judul { font-size: 15px; font-weight: bold; color: #1a5c38; margin-top: 15px; margin-bottom: 5px; display: block; }
         
-        /* === ✅ JADWAL SHOLAT — LEBIH TENGAH & SEIMBANG KIRI-KANAN === */
+        /* === ✅ JADWAL SHOLAT — BENAR-BENAR TENGAH & SEIMBANG === */
         .jadwal-sholat {
             background: linear-gradient(135deg, #e8f5ed 0%, #c8e6d0 100%);
-            padding: 25px 15px;
+            padding: 25px 20px;
             border-radius: 16px;
             box-shadow: 0 4px 12px rgba(26, 92, 56, 0.18);
-            margin: 25px auto; /* ← OTOMATIS TENGAH */
+            margin: 25px auto !important;
             border: 3px solid #1a5c38;
-            max-width: 460px; /* ← LEBAR TERKONTROL BIAR SEIMBANG */
-            width: 95%;
+            max-width: 420px;
+            width: 100%;
         }
         .jadwal-sholat h3 {
             color: #1a5c38; text-align: center;
-            font-size: 20px; margin-bottom: 15px;
+            font-size: 20px; margin-bottom: 8px;
         }
         .jadwal-sholat > p {
-            text-align: center; font-size: 13px;
-            color: #555; margin-bottom: 20px;
+            text-align: center; font-size: 12px;
+            color: #555; margin-bottom: 18px;
         }
         .jadwal-grid {
             display: grid;
-            grid-template-columns: repeat(5, 1fr); /* ← 5 KOTAK SAMA LEBAR */
-            gap: 10px; /* ← JARAK ANTAR KOTAK SAMA RATA */
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
             text-align: center;
-            padding: 0 5px; /* ← SPASI KIRI-KANAN SAMA */
+            justify-items: center;
         }
         .jadwal-box {
-            background: white; padding: 15px 5px; border-radius: 12px;
+            background: white;
+            padding: 15px 8px;
+            border-radius: 12px;
             border: 2px solid #1a5c38;
             box-shadow: 0 3px 6px rgba(26, 92, 56, 0.15);
-            transition: transform 0.2s;
+            width: 100%;
+            max-width: 75px;
         }
-        .jadwal-box:hover { transform: translateY(-2px); }
         .jadwal-box strong {
             font-size: 15px; color: #1a5c38;
             display: block; margin-bottom: 8px;
@@ -147,10 +147,10 @@
         li { margin-bottom: 5px; }
         hr { border: none; border-top: 2px dashed #ccc; margin: 20px 0; }
         
-        /* === TAMPILAN HP — TETAP RAPI === */
-        @media (max-width: 600px) {
-            .jadwal-grid { grid-template-columns: repeat(5, 1fr); gap: 6px; padding: 0; }
-            .jadwal-box { padding: 12px 3px; }
+        /* === HP — TETAP RAPI === */
+        @media (max-width: 480px) {
+            .jadwal-grid { gap: 6px; }
+            .jadwal-box { padding: 12px 4px; }
             .jadwal-box strong { font-size: 13px; }
             .jadwal-box span { font-size: 15px; }
         }
@@ -158,18 +158,18 @@
 </head>
 <body>
 
-<!-- LOGO DKM -->
+<!-- ==============================================
+     HANYA LOGO — TANPA TULISAN DI BAWAHNYA
+     ============================================== -->
 <div class="top-header">
     <div class="logo-dkm">
         <img src="file_000000007b9c6230abbe697983711c0d.png" alt="Logo DKM Nurul Ukhuwah">
     </div>
-    <div class="header-text">
-        <h1>Masjid Nurul Ukhuwah</h1>
-        <p>Dewan Kemakmuran Masjid — Donan, Cilacap Tengah, Jawa Tengah</p>
-    </div>
 </div>
 
-<!-- VIDEO + ALAMAT -->
+<!-- ==============================================
+     BANNER VIDEO + ALAMAT
+     ============================================== -->
 <div class="header-banner">
     <video loop playsinline controls>
         <source src="km_20220204_1080p(1).mp4" type="video/mp4">
@@ -180,7 +180,9 @@
     </div>
 </div>
 
-<!-- MENU -->
+<!-- ==============================================
+     MENU
+     ============================================== -->
 <nav>
     <a href="#beranda">🏠 Beranda</a>
     <a href="#tentang">📖 Tentang</a>
@@ -188,7 +190,9 @@
     <a href="#kontak">📞 Kontak</a>
 </nav>
 
-<!-- BERANDA + JADWAL SHOLAT LEBIH TENGAH -->
+<!-- ==============================================
+     BERANDA — JADWAL SHOLAT BENAR-BENAR TENGAH
+     ============================================== -->
 <section id="beranda">
     <div class="hero">
         <h2>🕌 Selamat Datang di Masjid Nurul Ukhuwah</h2>
@@ -196,7 +200,7 @@
         <br>
         <p>Semoga masjid ini senantiasa menjadi rumah Allah yang diberkahi, tempat tegaknya sholat berjamaah, penyebaran ilmu yang bermanfaat, serta pusat kebaikan dan kerukunan antarwarga. 🤲</p>
         
-        <!-- ✅ JADWAL SHOLAT — LEBIH TENGAH & SEIMBANG KIRI-KANAN -->
+        <!-- ✅ JADWAL SHOLAT — TENGAH & SEIMBANG KIRI-KANAN -->
         <div class="jadwal-sholat">
             <h3>🕌 JADWAL SHOLAT — Cilacap Tengah</h3>
             <p>* Waktu setempat — dapat berubah setiap hari</p>
@@ -211,7 +215,9 @@
     </div>
 </section>
 
-<!-- TENTANG MASJID -->
+<!-- ==============================================
+     TENTANG MASJID
+     ============================================== -->
 <section id="tentang">
     <h2>📖 Tentang Masjid</h2>
     <div class="info-box">
@@ -237,7 +243,9 @@
     </div>
 </section>
 
-<!-- KEGIATAN -->
+<!-- ==============================================
+     KEGIATAN
+     ============================================== -->
 <section id="kegiatan">
     <h2>📚 Kegiatan Rutin</h2>
     <div class="info-box">
@@ -354,7 +362,9 @@
     </div>
 </section>
 
-<!-- KONTAK & DONASI -->
+<!-- ==============================================
+     KONTAK & DONASI
+     ============================================== -->
 <section id="kontak">
     <h2>📞 Kontak & Informasi</h2>
     <div class="info-box">
@@ -380,7 +390,9 @@
     </div>
 </section>
 
-<!-- KAKI HALAMAN -->
+<!-- ==============================================
+     KAKI HALAMAN
+     ============================================== -->
 <footer>
     <p>🕌 <strong>Dewan Kemakmuran Masjid Nurul Ukhuwah</strong></p>
     <p>Jl. Kutilang Barat — Donan, Cilacap Tengah, Jawa Tengah — 53222</p>
