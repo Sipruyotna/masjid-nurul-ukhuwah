@@ -8,21 +8,21 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
         body { line-height: 1.8; color: #333; background: #f9f6f0; }
         
-        /* === BAGIAN ATAS: VIDEO LATAR BELAKANG — TANPA NAMA BESAR, ALAMAT DI BAWAH === */
-        .header-video {
+        /* === BAGIAN ATAS: VIDEO + ALAMAT DI BAWAH — TANPA NAMA MASJID === */
+        .header-banner {
             position: relative;
             background: #1a5c38;
-            min-height: 200px;
+            min-height: 220px;
             display: flex;
             flex-direction: column;
+            justify-content: flex-end; /* DORONG ISI KE BAWAH */
             align-items: center;
-            justify-content: flex-end;
             color: white;
             text-align: center;
-            padding: 10px 20px 12px 20px;
+            padding: 0 15px 8px 15px; /* atas:0, bawah:8 — MEPET KE BAWAH */
             overflow: hidden;
         }
-        .header-video video {
+        .header-banner video {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -30,19 +30,19 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            opacity: 0.55;
+            opacity: 0.6;
             z-index: 1;
         }
-        .header-video .overlay-content {
+        .header-banner .alamat-masjid {
             position: relative;
             z-index: 2;
-        }
-        .header-video p {
             font-size: 14px;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
-            max-width: 600px;
-            opacity: 0.95;
-            font-weight: 500;
+            line-height: 1.6;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+            background: rgba(0,0,0,0.35);
+            padding: 6px 15px;
+            border-radius: 6px;
+            max-width: 650px;
         }
         
         /* === MENU NAVIGASI === */
@@ -56,12 +56,12 @@
         }
         nav a {
             color: white;
-            margin: 0 15px;
+            margin: 0 12px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 17px;
+            font-size: 16px;
             display: inline-block;
-            padding: 4px 8px;
+            padding: 4px 6px;
         }
         nav a:hover { text-decoration: underline; }
         
@@ -91,15 +91,7 @@
             margin-top: 12px;
             margin-bottom: 8px;
             box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-        }
-        blockquote.tiktok-embed {
-            max-width: 480px !important;
-            min-width: 280px !important;
-            margin-top: 12px !important;
-            margin-bottom: 8px !important;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            background: #000;
         }
         
         /* === JADWAL SHOLAT — DALAM SATU KOTAK === */
@@ -165,18 +157,19 @@
 <body>
 
 <!-- ==============================================
-     BAGIAN ATAS: VIDEO LATAR BELAKANG — TANPA NAMA MASJID, HANYA ALAMAT
+     BAGIAN ATAS: VIDEO LATAR — TANPA NAMA MASJID
+     ALAMAT DI BAWAH, MEPET KE MENU
      ============================================== -->
-<div class="header-video">
-    <!-- Video Latar Belakang -->
-    <video autoplay muted loop playsinline>
+<div class="header-banner">
+    <!-- Video Latar Belakang — DENGAN TOMBOL SUARA & PUTAR -->
+    <video autoplay muted loop playsinline controls>
         <source src="km_20220204_1080p(1).mp4" type="video/mp4">
         Maaf, peramban tidak mendukung video.
     </video>
     
-    <!-- HANYA ALAMAT — TULISAN NAMA MASJID SUDAH DIHAPUS -->
-    <div class="overlay-content">
-        <p>Jl. Kutilang Barat — RT 01 RW XI, Kelurahan Donan, Cilacap Tengah, Kab. Cilacap, Jawa Tengah — 53222</p>
+    <!-- ALAMAT DI BAWAH VIDEO — MEPET KE MENU -->
+    <div class="alamat-masjid">
+        📍 Jl. Kutilang Barat — RT 01 RW XI, Kelurahan Donan, Cilacap Tengah, Kab. Cilacap, Jawa Tengah — 53222
     </div>
 </div>
 
@@ -194,7 +187,7 @@
      BERANDA — SELAMAT DATANG + JADWAL SHOLAT
      ============================================== -->
 <section id="beranda" class="hero">
-    <h1>Selamat Datang di Masjid Nurul Ukhuwah</h1>
+    <h1>🕌 Masjid Nurul Ukhuwah</h1>
     <p><em>Tempat Ibadah, Ilmu, dan Ukhuwah Islamiyah</em></p>
     <br>
     <p>Semoga masjid ini senantiasa menjadi rumah Allah yang diberkahi, tempat tegaknya sholat berjamaah, penyebaran ilmu yang bermanfaat, serta pusat kebaikan dan kerukunan antarwarga. 🤲</p>
@@ -235,19 +228,13 @@
         <br>
         <p><strong>🔧 Perawatan & Perbaikan Masjid:</strong></p>
         <img src="IMG-20260816-WA0010(1).jpg" alt="Perbaikan Atap Masjid" class="foto-kegiatan">
-        <p style="font-size:14px; color:#666; margin-top:5px;">Perbaikan atap bocor dan pemeliharaan fasilitas masjid</p>
-        <!-- TikTok: Perbaikan Suara Adzan -->
-        <blockquote class="tiktok-embed" cite="https://vt.tiktok.com/ZSVNTkbFc/" data-video-id="ZSVNTkbFc" style="max-width:480px;min-width:280px;">
-            <section>
-                <a target="_blank" href="https://vt.tiktok.com/ZSVNTkbFc/">Video Perbaikan TOA Adzan</a>
-                <p>Perbaikan pengeras suara adzan & pemeliharaan masjid</p>
-            </section>
-        </blockquote>
+        <p style="font-size:14px; color:#666; margin-top:5px;">Perbaikan atap bocor & pemeliharaan fasilitas masjid</p>
+        <p style="margin-top:10px;"><a href="https://vt.tiktok.com/ZSVNTkbFc/" target="_blank">🎬 Klik di sini → Video Perbaikan Pengeras Suara Adzan</a></p>
     </div>
 </section>
 
 <!-- ==============================================
-     KEGIATAN — DENGAN FOTO & VIDEO LENGKAP
+     KEGIATAN — DENGAN FOTO & VIDEO
      ============================================== -->
 <section id="kegiatan">
     <h2>📚 Kegiatan Rutin</h2>
@@ -263,7 +250,7 @@
             </video>
         </div>
         
-        <!-- 2. PENGAJIAN BAPAK-BAPAK — MALAM KAMIS (TAHSINUL QUR'AN) -->
+        <!-- 2. PENGAJIAN BAPAK-BAPAK — MALAM KAMIS -->
         <div class="kegiatan-item">
             <strong>📝 Pengajian Bapak-bapak — Tahsinul Qur'an</strong><br>
             Setiap malam Kamis, setelah Maghrib – menjelang Isya. Bersama Ustadz
@@ -273,7 +260,7 @@
             </video>
         </div>
         
-        <!-- 3. PENGAJIAN UMUM BULANAN — AHAD KETIGA -->
+        <!-- 3. PENGAJIAN UMUM BULANAN -->
         <div class="kegiatan-item">
             <strong>🌿 Pengajian Umum Bulanan</strong><br>
             Setiap Ahad minggu ketiga, setelah Ashar – menjelang Maghrib. Terbuka untuk seluruh jamaah, warga RW XI & sekitar. Bersama Ustadz/Ustadzah
@@ -301,7 +288,7 @@
             Setiap 10 minggu sekali, bergilir di masjid wilayah Donan. Bersama Ustadz
         </div>
         
-        <!-- 7. MENYALURKAN PARCEL IDUL FITRI -->
+        <!-- 7. PENYALURAN PARCEL IDUL FITRI -->
         <div class="kegiatan-item">
             <strong>📦 Penyaluran Parcel Idul Fitri</strong><br>
             Berbagi kebahagiaan kepada warga sekitar — hasil infak jamaah
@@ -311,26 +298,17 @@
             </video>
         </div>
         
-        <!-- 8. MENGHITUNG INFAK KALENG -->
-        <div class="kegiatan-item">
-            <strong>💰 Menghitung Infak Kaleng Bulanan</strong><br>
-            Hasil infak kaleng dari jamaah dan warga sekitar — setiap bulan
-            <video class="video-kegiatan" controls>
-                <source src="VID-20260816-WA0017.mp4" type="video/mp4">
-                Maaf, peramban tidak mendukung pemutaran video.
-            </video>
-        </div>
-        
         <hr style="border: 1px dashed #ddd; margin: 20px 0;">
         
-        <!-- 9. BULAN RAMADHAN -->
+        <!-- 8. BULAN RAMADHAN -->
         <div class="kegiatan-item">
             <strong>🌕 Bulan Ramadhan</strong><br>
             ✅ Sholat Tarawih & Kultum sebelum Subuh<br>
             ✅ Pengajian umum 4x setiap Ahad sore ba'da Ashar + pembagian nasi kotak<br>
             ✅ Buka puasa bersama pengurus masjid<br>
             ✅ Sepuluh hari terakhir: Itikaf penuh di masjid
-            <br>
+            <br><br>
+            <strong>🎥 Pengajian Ahad Ramadhan & Kultum Subuh:</strong><br>
             <video class="video-kegiatan" controls>
                 <source src="VID-20260816-WA0005.mp4" type="video/mp4">
                 Maaf, peramban tidak mendukung pemutaran video.
@@ -347,48 +325,31 @@
                 <source src="VID-20260816-WA0009.mp4" type="video/mp4">
                 Maaf, peramban tidak mendukung pemutaran video.
             </video>
-            <p style="font-size:14px; color:#666; margin-top:5px;">Kultum Subuh & Pengajian umum setiap Ahad Ramadhan</p>
+            <br>
+            <strong>🎥 I'tikaf 10 Hari Terakhir Ramadhan:</strong><br>
             <video class="video-kegiatan" controls>
                 <source src="VID-20260815-WA0029.mp4" type="video/mp4">
                 Maaf, peramban tidak mendukung pemutaran video.
             </video>
-            <p style="font-size:14px; color:#666; margin-top:5px;">I'tikaf 10 hari terakhir Ramadhan</p>
             <video class="video-kegiatan" controls>
                 <source src="VID-20260816-WA0015.mp4" type="video/mp4">
                 Maaf, peramban tidak mendukung pemutaran video.
             </video>
-            <p style="font-size:14px; color:#666; margin-top:5px;">Kebersamaan di sela-sela I'tikaf</p>
         </div>
         
-        <!-- 10. IDUL ADHA — QURBAN -->
+        <!-- 9. IDUL ADHA — QURBAN -->
         <div class="kegiatan-item">
             <strong>🐑 Idul Adha — Qurban</strong><br>
             Menerima hewan qurban, menyembelih, mengolah, hingga membagikan daging kepada warga sekitar
             <img src="IMG-20260816-WA0011.jpg" alt="Survei Hewan Qurban" class="foto-kegiatan">
             <p style="font-size:14px; color:#666; margin-top:5px;">Survei & persiapan hewan qurban</p>
-            <!-- TikTok: Qurban -->
-            <blockquote class="tiktok-embed" cite="https://vt.tiktok.com/ZSVNTqoJR/" data-video-id="ZSVNTqoJR" style="max-width:480px;min-width:280px;">
-                <section>
-                    <a target="_blank" href="https://vt.tiktok.com/ZSVNTqoJR/">Video Idul Adha Qurban</a>
-                    <p>Pembagian daging qurban — dua ekor sapi, satu kambing, selesai dalam 5 jam Alhamdulillah</p>
-                </section>
-            </blockquote>
-            <!-- TikTok: Tempat Penyembelihan Qurban -->
-            <blockquote class="tiktok-embed" cite="https://vt.tiktok.com/ZSVNwfCHQ/" data-video-id="ZSVNwfCHQ" style="max-width:480px;min-width:280px;">
-                <section>
-                    <a target="_blank" href="https://vt.tiktok.com/ZSVNwfCHQ/">Video Tempat Penyembelihan</a>
-                    <p>Persiapan dan perbaikan tempat penyembelihan hewan qurban</p>
-                </section>
-            </blockquote>
+            <p style="margin-top:10px;">
+                <a href="https://vt.tiktok.com/ZSVNTqoJR/" target="_blank">🎬 Klik → Video Pembagian Daging Qurban</a><br>
+                <a href="https://vt.tiktok.com/ZSVNwfCHQ/" target="_blank">🎬 Klik → Video Persiapan Tempat Penyembelihan</a>
+            </p>
         </div>
         
-        <!-- 11. ZAKAT & INFAK -->
-        <div class="kegiatan-item">
-            <strong>💵 Zakat & Infak</strong><br>
-            Menerima dan menyalurkan Zakat Fitrah, Zakat Mal, serta Infak dan Sedekah
-        </div>
-        
-        <!-- 12. SHOLAT IDUL FITRI -->
+        <!-- 10. SHOLAT IDUL FITRI -->
         <div class="kegiatan-item">
             <strong>🕌 Sholat Idul Fitri</strong><br>
             Dilaksanakan secara berjamaah di masjid
@@ -398,7 +359,7 @@
 </section>
 
 <!-- ==============================================
-     KONTAK & DONASI
+     KONTAK & DONASI — INFak KALENG DI SINI
      ============================================== -->
 <section id="kontak">
     <h2>📞 Kontak & Informasi</h2>
@@ -410,6 +371,14 @@
         • Bpk. Sulistiyono — WhatsApp: <a href="https://wa.me/6281327530681" target="_blank">+62 813-2753-0681</a><br>
         • Bpk. Aditia Nugroho — WhatsApp: <a href="https://wa.me/6281311509584" target="_blank">+62 813-1150-9584</a><br>
         • Bpk. Supriyatno — WhatsApp: <a href="https://wa.me/6283872605334" target="_blank">+62 838-7260-5334</a></p>
+        <br>
+        <p><strong>💰 Infak Kaleng Bulanan:</strong><br>
+        Hasil pengumpulan infak kaleng dari jamaah dan warga sekitar — dihitung setiap bulan untuk keperluan masjid dan sosial.
+        <video class="video-kegiatan" controls>
+            <source src="VID-20260816-WA0017.mp4" type="video/mp4">
+            Maaf, peramban tidak mendukung pemutaran video.
+        </video>
+        </p>
         <br>
         <p><strong>💳 Info Rekening Donasi:</strong><br>
         Bank Syariah Indonesia (BSI) — No. Rekening: <strong>7205811871</strong> a.n. Masjid Nurul Ukhuwah</p>
@@ -424,11 +393,5 @@
     <p style="margin-top: 8px; font-size: 13px;">© 2026 — Semoga menjadi tempat yang diberkahi Allah SWT 🤲</p>
 </footer>
 
-<!-- Script untuk video TikTok -->
-<script async src="https://www.tiktok.com/embed.js"></script>
-
 </body>
 </html>
-
-
-
