@@ -8,13 +8,10 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
         body { line-height: 1.6; color: #333; background: #f9f6f0; }
         
-        /* === HEADER — LOGO === */
         .top-header {
             background: linear-gradient(135deg, #145230 0%, #1a5c38 50%, #2d7a50 100%);
             padding: 20px 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: flex; align-items: center; justify-content: center;
         }
         .logo-dkm {
             width: 100px; height: 100px; border-radius: 50%;
@@ -24,7 +21,6 @@
         }
         .logo-dkm img { width: 100%; height: 100%; object-fit: cover; }
         
-        /* === BANNER VIDEO + ALAMAT === */
         .header-banner {
             position: relative; background: #1a5c38; min-height: 160px;
             display: flex; flex-direction: column; justify-content: flex-end;
@@ -43,7 +39,6 @@
             max-width: 95%;
         }
         
-        /* === MENU === */
         nav {
             background: #236b45; padding: 12px 5px; position: sticky; top: 0; z-index: 100;
             text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.15);
@@ -55,7 +50,6 @@
         }
         nav a:hover { background: rgba(255,255,255,0.2); }
         
-        /* === ACARA TERDEKAT === */
         .acara-terdekat {
             background: linear-gradient(135deg, #fff9e6, #fff3cc); border: 3px solid #d4a900;
             border-radius: 14px; padding: 20px 15px; margin: 25px 15px; text-align: center;
@@ -68,7 +62,6 @@
         .acara-terdekat .info-acara { font-size: 15px; line-height: 2; margin-top: 10px; }
         .acara-terdekat .hadits { background: white; padding: 12px; border-radius: 8px; margin-top: 15px; font-style: italic; color: #555; border-left: 4px solid #d4a900; }
         
-        /* === ISI HALAMAN === */
         section { padding: 20px 15px; max-width: 800px; margin: 0 auto; }
         h2 { color: #1a5c38; margin-bottom: 15px; border-bottom: 3px solid #1a5c38; padding-bottom: 5px; font-size: 21px; display: flex; align-items: center; gap: 8px; }
         .hero { background: linear-gradient(135deg, #e8f5ed 0%, #d4e9dd 100%); padding: 25px 15px; text-align: center; border-radius: 12px; margin-bottom: 25px; border: 2px solid #1a5c38; }
@@ -78,14 +71,12 @@
         .kegiatan-item:last-child { border-bottom: none; }
         .kegiatan-item strong { font-size: 16px; color: #1a5c38; }
         
-        /* === FOTO & VIDEO === */
         .foto-kegiatan { width: 100%; max-width: 400px; border-radius: 10px; margin-top: 10px; margin-bottom: 8px; box-shadow: 0 3px 8px rgba(0,0,0,0.12); }
         .foto-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 15px; }
         .foto-grid img { width: 100%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
         .video-kegiatan { width: 100%; max-width: 480px; border-radius: 10px; margin-top: 10px; margin-bottom: 12px; box-shadow: 0 3px 8px rgba(0,0,0,0.15); background: #000; }
         .video-judul { font-size: 15px; font-weight: bold; color: #1a5c38; margin-top: 15px; margin-bottom: 5px; display: block; }
         
-        /* === JADWAL SHOLAT === */
         .jadwal-sholat {
             background: linear-gradient(135deg, #e8f5ed 0%, #c8e6d0 100%);
             padding: 25px 15px; border-radius: 16px;
@@ -100,7 +91,6 @@
         .jadwal-box strong { font-size: 14px; color: #1a5c38; display: block; margin-bottom: 5px; }
         .jadwal-box span { font-size: 16px; font-weight: bold; color: #333; }
         
-        /* === PENGAJAR ILMU === */
         .penghormatan-pengajar {
             background: linear-gradient(135deg, #f0f7f4, #e4f1eb);
             border-left: 5px solid #1a5c38; padding: 20px; border-radius: 10px;
@@ -112,7 +102,6 @@
             border: 1px dashed #1a5c38; font-style: italic; color: #555; font-size: 14px;
         }
         
-        /* === KAKI HALAMAN === */
         footer { background: #145230; color: white; text-align: center; padding: 20px 15px; margin-top: 40px; font-size: 14px; }
         a { color: #1a5c38; text-decoration: none; }
         a:hover { text-decoration: underline; }
@@ -120,7 +109,6 @@
         li { margin-bottom: 5px; }
         hr { border: none; border-top: 2px dashed #ccc; margin: 20px 0; }
         
-        /* === HP === */
         @media (max-width: 420px) {
             .jadwal-sholat { width: 95%; padding: 20px 10px; }
             .jadwal-grid { gap: 5px; padding: 0; }
@@ -134,14 +122,12 @@
 </head>
 <body>
 
-<!-- LOGO -->
 <div class="top-header">
     <div class="logo-dkm">
         <img src="file_000000007b9c6230abbe697983711c0d.png" alt="Logo DKM Nurul Ukhuwah">
     </div>
 </div>
 
-<!-- VIDEO + ALAMAT -->
 <div class="header-banner">
     <video loop playsinline controls>
         <source src="km_20220204_1080p(1).mp4" type="video/mp4">
@@ -152,7 +138,6 @@
     </div>
 </div>
 
-<!-- MENU -->
 <nav>
     <a href="#beranda">🏠 Beranda</a>
     <a href="#tentang">📖 Tentang</a>
@@ -160,9 +145,7 @@
     <a href="#kontak">📞 Kontak</a>
 </nav>
 
-<!-- BERANDA -->
 <section id="beranda">
-    <!-- ACARA TERDEKAT -->
     <div class="acara-terdekat">
         <h3>📅 ACARA TERDEKAT — KAJIAN ISLAM</h3>
         <p style="color:#666; font-size:14px;">Kajian Fikih Akhlak #4</p>
@@ -188,7 +171,6 @@
         <br>
         <p>Semoga masjid ini senantiasa menjadi rumah Allah yang diberkahi, tempat tegaknya sholat berjamaah, penyebaran ilmu yang bermanfaat, serta pusat kebaikan dan kerukunan antarwarga. 🤲</p>
         
-        <!-- JADWAL SHOLAT -->
         <div class="jadwal-sholat">
             <h3>🕌 JADWAL SHOLAT — Cilacap Tengah</h3>
             <p>* Waktu setempat — dapat berubah setiap hari</p>
@@ -203,7 +185,6 @@
     </div>
 </section>
 
-<!-- TENTANG MASJID -->
 <section id="tentang">
     <h2>📖 Tentang Masjid</h2>
     <div class="info-box">
@@ -229,7 +210,6 @@
     </div>
 </section>
 
-<!-- KEGIATAN -->
 <section id="kegiatan">
     <h2>📚 Kegiatan Rutin</h2>
     <div class="info-box">
@@ -288,7 +268,6 @@
         
         <hr>
         
-        <!-- BULAN RAMADHAN -->
         <div class="kegiatan-item">
             <strong>🌙 Bulan Ramadhan</strong><br>
             ✅ Pengajian umum 4x setiap Ahad ba'da Ashar + pembagian nasi kotak bekal buka puasa<br>
@@ -329,7 +308,6 @@
             </video>
         </div>
         
-        <!-- IDUL ADHA -->
         <div class="kegiatan-item">
             <strong>🐑 Idul Adha — Qurban</strong><br>
             Menerima hewan qurban, menyembelih, mengolah, hingga membagikan daging kepada warga sekitar
@@ -366,7 +344,6 @@
     </div>
 </section>
 
-<!-- KONTAK & DONASI — SUDAH DIPERBAIKI a.n. MASJID NURUL UKHUWAH -->
 <section id="kontak">
     <h2>📞 Kontak & Informasi</h2>
     <div class="info-box">
@@ -379,7 +356,6 @@
         • Bpk. Supriyatno — Bendahara &nbsp; <a href="https://wa.me/6283872605334" target="_blank">+62 838-7260-5334</a></p>
         <br>
         
-        <!-- 🌿 PENGHARGAAN PENGAJAR ILMU — AMAN & HALUS -->
         <div class="penghormatan-pengajar">
             <h3>🌿 Penghormatan untuk Para Pengajar Ilmu</h3>
             <p>Masjid Nurul Ukhuwah senantiasa dibantu oleh para Ustadz dan Ustadzah yang dengan tulus dan ikhlas menyampaikan ilmu Al-Qur'an, Fikih, dan Tajwid kepada kita semua. Mereka hadir tanpa mengharap imbalan, semata-mata mengharap ridha Allah SWT.</p>
@@ -404,7 +380,6 @@
     </div>
 </section>
 
-<!-- KAKI HALAMAN -->
 <footer>
     <p>🕌 <strong>Masjid Nurul Ukhuwah</strong></p>
     <p>Jl. Kutilang Barat — Donan, Cilacap Tengah, Jawa Tengah — 53222</p>
