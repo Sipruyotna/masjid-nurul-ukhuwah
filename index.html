@@ -77,6 +77,53 @@
         }
         nav a:hover { background: rgba(255,255,255,0.2); }
         
+        /* === ACARA TERDEKAT — BERANDA === */
+        .acara-terdekat {
+            background: linear-gradient(135deg, #fff9e6, #fff3cc);
+            border: 3px solid #d4a900;
+            border-radius: 14px;
+            padding: 20px 15px;
+            margin: 25px 15px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(139, 69, 19, 0.15);
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .acara-terdekat h3 {
+            color: #8b4513;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .acara-terdekat h2 {
+            color: #1a5c38;
+            font-size: 26px;
+            border: none;
+            margin: 5px 0 10px 0;
+            padding: 0;
+        }
+        .acara-terdekat .poster-acara {
+            max-width: 360px;
+            width: 100%;
+            border-radius: 10px;
+            margin: 12px auto;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+        .acara-terdekat .info-acara {
+            font-size: 15px;
+            line-height: 2;
+            margin-top: 10px;
+        }
+        .acara-terdekat .hadits {
+            background: white;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-style: italic;
+            color: #555;
+            border-left: 4px solid #d4a900;
+        }
+        
         /* === ISI HALAMAN === */
         section { padding: 20px 15px; max-width: 800px; margin: 0 auto; }
         h2 { color: #1a5c38; margin-bottom: 15px; border-bottom: 3px solid #1a5c38; padding-bottom: 5px; font-size: 21px; display: flex; align-items: center; gap: 8px; }
@@ -94,7 +141,7 @@
         .video-kegiatan { width: 100%; max-width: 480px; border-radius: 10px; margin-top: 10px; margin-bottom: 12px; box-shadow: 0 3px 8px rgba(0,0,0,0.15); background: #000; }
         .video-judul { font-size: 15px; font-weight: bold; color: #1a5c38; margin-top: 15px; margin-bottom: 5px; display: block; }
         
-        /* === ✅ JADWAL SHOLAT — BENAR-BENAR TENGAH & SEIMBANG === */
+        /* === ✅ JADWAL SHOLAT — TENGAH & SEIMBANG === */
         .jadwal-sholat {
             background: linear-gradient(135deg, #e8f5ed 0%, #c8e6d0 100%);
             padding: 25px 15px;
@@ -151,6 +198,8 @@
             .jadwal-box { padding: 10px 2px; }
             .jadwal-box strong { font-size: 12px; }
             .jadwal-box span { font-size: 14px; }
+            .acara-terdekat { margin: 15px 10px; padding: 15px 10px; }
+            .acara-terdekat h2 { font-size: 22px; }
         }
     </style>
 </head>
@@ -182,8 +231,33 @@
     <a href="#kontak">📞 Kontak</a>
 </nav>
 
-<!-- BERANDA + JADWAL SHOLAT -->
+<!-- BERANDA -->
 <section id="beranda">
+    <!-- ✅ ACARA TERDEKAT — PALING ATAS — POSTER SUDAH SESUAI NAMA FILE! -->
+    <div class="acara-terdekat">
+        <h3>📅 ACARA TERDEKAT — KAJIAN ISLAM</h3>
+        <p style="color:#666; font-size:14px;">Kajian Fikih Akhlak #4</p>
+        <h2>"BERKATA LEMBUT"</h2>
+        
+        <!-- ✅ NAMA FILE SUDAH SESUAI DENGAN YANG DI-UPLOAD BAPAK! -->
+        <img src="file_00000000d09481f89bedb9c3d6de6b4f.png" alt="Poster Kajian Berkata Lembut — Ustadz Eko Junianto SE" class="poster-acara">
+        
+        <div class="info-acara">
+            📅 <strong>Hari/Tanggal:</strong> Rabu, 19 Agustus 2026<br>
+            🕐 <strong>Waktu:</strong> Ba'da Maghrib<br>
+            🕌 <strong>Tempat:</strong> Masjid Nurul Ukhuwah — Jl. Kutilang Barat, Donan, Cilacap Tengah<br>
+            📖 <strong>Pemateri:</strong> Ustadz Eko Junianto, SE<br>
+            📞 <strong>Info/Kontak:</strong> Pak Supriyatno — 0812-3456-7890
+        </div>
+        
+        <div class="hadits">
+            "Barangsiapa menempuh jalan untuk mencari ilmu, maka Allah akan memudahkan jalan baginya ke surga."<br>
+            <small>— HR. Muslim</small>
+        </div>
+        
+        <p style="margin-top:15px; font-weight:bold; color:#1a5c38;">🤲 Diharapkan kehadirannya, semoga bermanfaat!</p>
+    </div>
+
     <div class="hero">
         <h2>🕌 Selamat Datang di Masjid Nurul Ukhuwah</h2>
         <p><em>Tempat Ibadah, Ilmu, dan Ukhuwah Islamiyah</em></p>
@@ -290,7 +364,7 @@
         
         <hr>
         
-        <!-- ✅ BULAN RAMADHAN — JUDUL DIUBAH: Taraweh & Kultum Subuh -->
+        <!-- BULAN RAMADHAN -->
         <div class="kegiatan-item">
             <strong>🌙 Bulan Ramadhan</strong><br>
             ✅ Pengajian umum 4x setiap Ahad ba'da Ashar + pembagian nasi kotak bekal buka puasa<br>
@@ -311,7 +385,6 @@
                 Maaf, peramban tidak mendukung pemutaran video.
             </video>
             
-            <!-- ✅ DIUBAH → Taraweh & Kultum Subuh -->
             <span class="video-judul">Taraweh & Kultum Subuh</span>
             <video class="video-kegiatan" controls>
                 <source src="VID-20260816-WA0007.mp4" type="video/mp4">
@@ -332,7 +405,7 @@
             </video>
         </div>
         
-        <!-- ✅ IDUL ADHA — DENGAN 14 FOTO -->
+        <!-- IDUL ADHA — DENGAN 14 FOTO -->
         <div class="kegiatan-item">
             <strong>🐑 Idul Adha — Qurban</strong><br>
             Menerima hewan qurban, menyembelih, mengolah, hingga membagikan daging kepada warga sekitar
