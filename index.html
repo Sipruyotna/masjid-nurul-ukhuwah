@@ -32,23 +32,21 @@
         .donate-btn { background: #c19a3b; color: white !important; font-weight: bold; }
         .donate-btn:hover { background: #a68329; }
 
-        /* === FOTO UTAMA & SELAMAT DATANG === */
-        .hero { position: relative; width: 100%; height: 80vh; max-height: 650px; overflow: hidden; }
-        .hero-img { width: 100%; height: 100%; object-fit: cover; }
-        .hero-overlay {
-            position: absolute;
-            bottom: 0; left: 0; right: 0;
-            background: linear-gradient(to top, rgba(20,82,48,0.95), rgba(20,82,48,0.4), transparent);
-            color: white;
-            padding: 60px 30px 50px;
+        /* === FOTO UTAMA — UTUH TIDAK TERTUTUP === */
+        .hero { width: 100%; overflow: hidden; }
+        .hero-img { width: 100%; height: auto; display: block; object-fit: contain; }
+        .hero-text {
+            background: linear-gradient(to bottom, #fff8e8, #fff);
+            padding: 35px 25px;
+            text-align: center;
         }
-        .hero-subtitle { font-size: 22px; font-style: italic; margin-bottom: 10px; }
-        .hero-title { font-size: 48px; font-weight: bold; line-height: 1.2; margin-bottom: 20px; }
-        .hero-desc { font-size: 19px; max-width: 800px; margin-bottom: 30px; opacity: 0.95; }
-        .hero-buttons { display: flex; gap: 20px; flex-wrap: wrap; }
+        .hero-subtitle { font-size: 22px; font-style: italic; color: #b8860b; margin-bottom: 8px; }
+        .hero-title { font-size: 42px; font-weight: bold; color: #1a5c38; line-height: 1.2; margin-bottom: 15px; }
+        .hero-desc { font-size: 18px; max-width: 800px; margin: 0 auto 25px; color: #444; line-height: 1.8; }
+        .hero-buttons { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
         .btn { padding: 14px 28px; font-size: 18px; border-radius: 8px; border: none; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; font-weight: 600; transition: transform 0.2s; }
         .btn:hover { transform: translateY(-2px); }
-        .btn-primary { background: white; color: #1a5c38; }
+        .btn-primary { background: #1a5c38; color: white; }
         .btn-secondary { background: #c19a3b; color: white; }
 
         /* === KONTEN UMUM === */
@@ -117,7 +115,7 @@
 <header class="top-header">
     <div class="logo-section">
         <div>
-            <div class="masjid-name">MASJID NURUL UKHUWAH</div>
+            <div class="masjid-name">🕌 MASJID NURUL UKHUWAH</div>
             <div class="masjid-sub">Donan, Cilacap Tengah — TBW 53222</div>
             <div class="id-masjid">🆔 ID Masjid: 01.6.14.01.22.000105</div>
         </div>
@@ -133,10 +131,10 @@
     </nav>
 </header>
 
-<!-- ==================== FOTO UTAMA & SELAMAT DATANG ==================== -->
+<!-- ==================== FOTO UTAMA — UTUH TIDAK TERTUTUP ==================== -->
 <section id="beranda" class="hero">
     <img src="file_0000000025c482119237d6c735814230.png" alt="Masjid Nurul Ukhuwah — Donan, Cilacap" class="hero-img">
-    <div class="hero-overlay">
+    <div class="hero-text">
         <p class="hero-subtitle">Mari Mengenal</p>
         <h1 class="hero-title">MASJID NURUL UKHUWAH</h1>
         <p class="hero-desc">Sebuah masjid di tengah masyarakat Donan, Cilacap — tempat ibadah, menuntut ilmu, dan tumbuhnya ukhuwah.</p>
@@ -170,7 +168,7 @@
             <p>Silakan lihat kegiatan rutin di bawah ini atau tanyakan langsung ke pengurus masjid.</p>
         </div>
 
-        <!-- === JADWAL SHOLAT — DIPERBAIKI === -->
+        <!-- === JADWAL SHOLAT === -->
         <div class="agenda-card">
             <h3 class="agenda-title">🕌 Jadwal Sholat</h3>
             <p style="margin-bottom:10px; font-size:16px; color:#555;">Waktu sholat dapat berubah mengikuti posisi matahari. Untuk jadwal yang paling akurat dan terbaru:</p>
@@ -181,8 +179,8 @@
         <!-- === LOKASI & KONTAK === -->
         <div class="agenda-card">
             <h3 class="agenda-title">📍 Lokasi Masjid</h3>
-            <p>Jl. Kutilang Barat<br>RT 01 RW XI, Kel. Donan<br>Cilacap Tengah, Jawa Tengah<br>📮 53222 — TBW (Tambak Wareng)</p>
-            <a href="https://maps.google.com/maps?q=Masjid+Nurul+Ukhuwah+IKADI+Donan+Cilacap,+Jawa+Tengah,+ID&sll=-7.716979503631592,109.0044174194336" target="_blank" class="lokasi-btn">🔗 Buka di Google Maps</a>
+            <p>Jl. Kutilang Barat<br>RT 01 RW XI, Kel. Donan<br>Cilacap Tengah, Jawa Tengah<br>📮 53222</p>
+            <a href="https://maps.google.com/maps?q=Masjid+Nurul+Ukhuwah+IKADI+Donan+Cilacap,+Jawa+Tengah" target="_blank" class="lokasi-btn">🔗 Buka di Google Maps</a>
             <div style="margin-top:15px; padding-top:15px; border-top:1px solid #eee;">
                 <p>📧 nurulukhuwahmasjid@gmail.com</p>
                 <p>📞 WA: +62 838-7260-5334</p>
@@ -229,7 +227,7 @@
     </div>
 </section>
 
-<!-- ==================== KEGIATAN MASJID ==================== -->
+<!-- ==================== KEGIATAN MASJID — SEMUA FOTO & VIDEO ==================== -->
 <section id="kegiatan" class="container">
     <h2 class="section-title">Kegiatan Rutin Masjid</h2>
     <p style="text-align:center; font-size:18px; color:#666; margin-bottom:40px;">Berbagai kegiatan yang menjadi nadi kehidupan masjid — dari ibadah, pendidikan, hingga silaturahmi</p>
@@ -280,9 +278,20 @@
                 <h3 class="kegiatan-judul">🚲 Gowes Bersama — Ahad Pagi</h3>
                 <p class="kegiatan-desc">Setiap <strong>Ahad pagi</strong> ba'da Subuh — rute 30–50 km. Bertujuan untuk kesehatan sekaligus dakwah melalui silaturahmi. Semoga tumbuh menjadi jamaah masjid yang aktif!</p>
                 <img src="IMG-20260719-WA0009.jpg" alt="Titik Nol">
+                <img src="IMG-20260719-WA0005(1).jpg" alt="Arah Proliman menuju PLTU">
+                <img src="IMG-20260719-WA0006.jpg" alt="Makan bersama di GOR">
+                <img src="IMG-20260719-WA0007.jpg" alt="Bersepeda bersama">
                 <video controls>
                     <source src="VID-20260818-WA0014.mp4" type="video/mp4">
-                    Video Gowes Bersama
+                    Video Gowes — Persiapan Start
+                </video>
+                <video controls>
+                    <source src="VID-20260818-WA0012.mp4" type="video/mp4">
+                    Video Gowes — Arah Pulang
+                </video>
+                <video controls>
+                    <source src="VID-20260818-WA0013.mp4" type="video/mp4">
+                    Video Gowes — Bersama
                 </video>
             </div>
         </div>
@@ -306,9 +315,13 @@
                 <h3 class="kegiatan-judul">🐏 Qurban — Juleha Bersertifikat</h3>
                 <p class="kegiatan-desc">Kami <strong>menyembelih sendiri</strong> — bukan penyembelih bayaran. Tim kami telah mengikuti pelatihan Juleha dan <strong>bersertifikat</strong>. Menggunakan alat standar pelatihan — bilah super tajam, tali penahan, hingga proses pengulitan dan pencacahan. Daging dikemas khusus untuk Shohibul Qurban dan dibagikan ke masyarakat sekitar.</p>
                 <p><strong>📌 Program Tabungan Qurban</strong> — tersedia setiap saat! Tahun ini telah diikuti 7 calon Shohibul Qurban.</p>
-                <img src="IMG-20260819-WA0015.jpg" alt="Sertifikat Juleha">
-                <img src="IMG-20260819-WA0017.jpg" alt="Sertifikat Juleha">
+                <img src="IMG-20260819-WA0015.jpg" alt="Sertifikat Juleha 1">
+                <img src="IMG-20260819-WA0017.jpg" alt="Sertifikat Juleha 2">
                 <img src="IMG-20260819-WA0016.jpg" alt="Ember Kemasan Shohibul Qurban">
+                <img src="IMG-20260817-WA0039.jpg" alt="Pembagian Daging Qurban">
+                <img src="IMG-20260817-WA0038.jpg" alt="Pembagian Daging Qurban">
+                <img src="IMG-20260817-WA0037.jpg" alt="Pembagian Daging Qurban">
+                <img src="IMG-20260817-WA0036.jpg" alt="Pembagian Daging Qurban">
             </div>
         </div>
 
@@ -320,6 +333,10 @@
                 <video controls>
                     <source src="VID-20260816-WA0004.mp4" type="video/mp4">
                     Video Penyaluran Parcel
+                </video>
+                <video controls>
+                    <source src="VID-20260817-WA0005.mp4" type="video/mp4">
+                    Video Penyaluran Parcel Idul Fitri
                 </video>
             </div>
         </div>
