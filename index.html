@@ -5,512 +5,384 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Masjid Nurul Ukhuwah — Donan, Cilacap Tengah</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
-        body { line-height: 1.7; color: #333; background: #f9f6f0; font-size: 16px; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, sans-serif; }
+        body { line-height: 1.8; color: #333; background: #f9f6f0; font-size: 18px; }
         
-        /* === HEADER ATAS — LOGO & NAMA === */
+        /* === HEADER & NAVIGASI === */
         .top-header {
             background: linear-gradient(135deg, #145230 0%, #1a5c38 50%, #2d7a50 100%);
-            padding: 15px 10px;
-            display: flex; align-items: center; justify-content: center; gap: 15px; flex-wrap: wrap;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        .logo-dkm {
-            width: 80px; height: 80px; border-radius: 50%; background: white;
-            display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.25); overflow: hidden;
-            border: 3px solid #d4a900;
-        }
-        .logo-dkm img { width: 100%; height: 100%; object-fit: cover; }
-        .judul-masjid { color: white; text-align: center; }
-        .judul-masjid h1 { font-size: 22px; margin-bottom: 3px; }
-        .judul-masjid p { font-size: 14px; opacity: 0.9; }
+        .logo-section { display: flex; align-items: center; gap: 12px; }
+        .logo-img { width: 45px; height: 45px; border-radius: 50%; background: white; padding: 4px; }
+        .masjid-name { font-size: 22px; font-weight: bold; }
+        .masjid-sub { font-size: 14px; opacity: 0.9; }
+        nav ul { display: flex; list-style: none; gap: 25px; flex-wrap: wrap; margin-top: 8px; }
+        nav a { color: white; text-decoration: none; font-size: 17px; font-weight: 500; padding: 8px 12px; border-radius: 5px; transition: background 0.3s; }
+        nav a:hover, nav a.active { background: rgba(255,255,255,0.2); }
+        .donate-btn { background: #c19a3b; color: white !important; font-weight: bold; }
+        .donate-btn:hover { background: #a68329; }
 
-        /* === BANNER FOTO ASLI MASJID === */
-        .hero-banner {
-            background: linear-gradient(rgba(20,82,48,0.85), rgba(26,92,56,0.85)), url('IMG-20260820-WA0008.jpg') center/cover no-repeat;
-            min-height: 380px; display: flex; flex-direction: column; justify-content: center;
-            align-items: center; color: white; text-align: center; padding: 30px 20px;
+        /* === FOTO UTAMA & SELAMAT DATANG === */
+        .hero { position: relative; width: 100%; height: 80vh; max-height: 650px; overflow: hidden; }
+        .hero-img { width: 100%; height: 100%; object-fit: cover; }
+        .hero-overlay {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            background: linear-gradient(to top, rgba(20,82,48,0.95), rgba(20,82,48,0.3), transparent);
+            color: white;
+            padding: 60px 30px 40px;
         }
-        .hero-banner h2 { font-size: 28px; margin-bottom: 12px; text-shadow: 0 2px 6px rgba(0,0,0,0.4); line-height: 1.3; }
-        .hero-banner .slogan { font-size: 17px; max-width: 650px; margin-bottom: 25px; line-height: 1.8; text-shadow: 0 1px 3px rgba(0,0,0,0.3); }
-        .btn {
-            display: inline-block; padding: 13px 28px; border-radius: 8px; text-decoration: none;
-            font-weight: bold; transition: all 0.3s; margin: 6px; border: none; cursor: pointer; font-size: 16px;
-        }
-        .btn-emas { background: #d4a900; color: #fff; box-shadow: 0 3px 8px rgba(0,0,0,0.2); }
-        .btn-emas:hover { background: #b8860b; }
-        .btn-putih { background: white; color: #1a5c38; box-shadow: 0 3px 8px rgba(0,0,0,0.2); }
-        .btn-putih:hover { background: #f0f0f0; }
+        .hero-subtitle { font-size: 24px; font-style: italic; margin-bottom: 10px; }
+        .hero-title { font-size: 52px; font-weight: bold; line-height: 1.2; margin-bottom: 20px; }
+        .hero-desc { font-size: 19px; max-width: 800px; margin-bottom: 30px; opacity: 0.95; }
+        .hero-buttons { display: flex; gap: 20px; flex-wrap: wrap; }
+        .btn { padding: 14px 28px; font-size: 18px; border-radius: 8px; border: none; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; font-weight: 600; transition: transform 0.2s; }
+        .btn:hover { transform: translateY(-2px); }
+        .btn-primary { background: white; color: #1a5c38; }
+        .btn-secondary { background: #c19a3b; color: white; }
 
-        /* === NAVIGASI === */
-        nav {
-            background: #236b45; padding: 12px 5px; position: sticky; top: 0; z-index: 100;
-            text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-        }
-        nav a {
-            color: white; margin: 0 6px; text-decoration: none; font-weight: bold;
-            font-size: 15px; display: inline-block; padding: 6px 10px;
-            border-radius: 4px; transition: background 0.3s;
-        }
-        nav a:hover { background: rgba(255,255,255,0.2); }
+        /* === KONTEN UMUM === */
+        .container { max-width: 1200px; margin: 0 auto; padding: 50px 25px; }
+        .section-title { font-size: 32px; color: #1a5c38; text-align: center; margin-bottom: 40px; font-weight: bold; position: relative; }
+        .section-title::after { content: ''; display: block; width: 80px; height: 4px; background: #c19a3b; margin: 12px auto 0; border-radius: 2px; }
+        .card { background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); padding: 30px; margin-bottom: 30px; }
 
-        /* === KONTAINER UTAMA === */
-        section { padding: 25px 15px; max-width: 850px; margin: 0 auto; }
-        h2 { color: #1a5c38; margin-bottom: 18px; border-bottom: 3px solid #1a5c38; padding-bottom: 8px; font-size: 22px; }
-        h3 { color: #1a5c38; font-size: 19px; margin-bottom: 12px; }
-        
-        .info-box { background: white; padding: 22px; border-radius: 12px; box-shadow: 0 3px 10px rgba(26,92,56,0.12); margin-bottom: 25px; border-left: 4px solid #1a5c38; }
-        
-        /* === ACARA TERDEKAT === */
-        .acara-terdekat {
-            background: linear-gradient(135deg, #fff9e6, #fff3cc); border: 3px solid #d4a900;
-            border-radius: 14px; padding: 22px 18px; margin: 25px auto; text-align: center;
-            box-shadow: 0 4px 12px rgba(139,69,19,0.15); max-width: 750px;
-        }
-        .acara-terdekat h3 { color: #8b4513; font-size: 20px; margin-bottom: 10px; }
-        .acara-kosong { color: #555; font-style: italic; padding: 15px; font-size: 16px; }
+        /* === AGENDA & JADWAL SHOLAT === */
+        .agenda-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 25px; }
+        @media(max-width:900px) { .agenda-grid { grid-template-columns: 1fr; } }
+        .agenda-card { background: white; border-radius: 12px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+        .agenda-title { font-size: 20px; font-weight: bold; color: #1a5c38; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .sholat-table { width: 100%; border-collapse: collapse; text-align: center; }
+        .sholat-table th, .sholat-table td { padding: 12px 8px; border-bottom: 1px solid #eee; font-size: 18px; }
+        .sholat-table th { color: #1a5c38; font-weight: bold; }
+        .sholat-note { font-size: 15px; color: #666; margin-top: 10px; font-style: italic; text-align: center; }
+        .lokasi-card { background: white; border-radius: 12px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+        .lokasi-btn { display: block; text-align: center; background: #1a5c38; color: white; padding: 12px; border-radius: 8px; text-decoration: none; margin-top: 15px; font-weight: 600; }
 
-        /* === JADWAL SHOLAT === */
-        .jadwal-sholat {
-            background: linear-gradient(135deg, #e8f5ed 0%, #c8e6d0 100%);
-            padding: 25px 15px; border-radius: 16px;
-            box-shadow: 0 4px 12px rgba(26,92,56,0.18);
-            margin: 25px auto !important; border: 3px solid #1a5c38;
-            max-width: 420px; width: 95%;
+        /* === SEJARAH === */
+        .timeline { position: relative; max-width: 900px; margin: 0 auto; }
+        .timeline::before { content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 4px; background: #1a5c38; transform: translateX(-50%); }
+        .timeline-item { position: relative; width: 50%; padding: 25px 40px; }
+        .timeline-item:nth-child(odd) { left: 0; text-align: right; }
+        .timeline-item:nth-child(even) { left: 50%; text-align: left; }
+        .timeline-dot { position: absolute; width: 20px; height: 20px; background: #c19a3b; border-radius: 50%; top: 30px; border: 4px solid #1a5c38; }
+        .timeline-item:nth-child(odd) .timeline-dot { right: -10px; }
+        .timeline-item:nth-child(even) .timeline-dot { left: -10px; }
+        .timeline-year { font-size: 28px; font-weight: bold; color: #1a5c38; margin-bottom: 8px; }
+        @media(max-width:768px) {
+            .timeline::before { left: 20px; }
+            .timeline-item { width: 100%; left: 0 !important; text-align: left !important; padding-left: 60px; padding-right: 20px; }
+            .timeline-dot { left: 10px !important; right: auto !important; }
         }
-        .jadwal-sholat h3 { color: #1a5c38; text-align: center; margin-bottom: 8px; }
-        .jadwal-sholat > p { text-align: center; font-size: 13px; color: #555; margin-bottom: 15px; }
-        .jadwal-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; text-align: center; }
-        .jadwal-box { background: white; padding: 12px 4px; border-radius: 10px; border: 2px solid #1a5c38; box-shadow: 0 2px 5px rgba(26,92,56,0.12); }
-        .jadwal-box strong { font-size: 14px; color: #1a5c38; display: block; margin-bottom: 4px; }
-        .jadwal-box span { font-size: 16px; font-weight: bold; color: #333; }
 
-        /* === SEJARAH — TIMELINE === */
-        .perjalanan-box {
-            background: white; padding: 25px; border-radius: 14px; border: 3px solid #1a5c38;
-            margin: 25px 0; box-shadow: 0 4px 12px rgba(26,92,56,0.12);
-        }
-        .timeline { position: relative; padding-left: 30px; }
-        .timeline::before {
-            content: ''; position: absolute; left: 10px; top: 5px; bottom: 5px;
-            width: 3px; background: linear-gradient(180deg, #1a5c38, #d4a900); border-radius: 3px;
-        }
-        .timeline-item { position: relative; margin-bottom: 25px; }
-        .timeline-item::before {
-            content: ''; position: absolute; left: -26px; top: 5px;
-            width: 14px; height: 14px; background: #d4a900; border-radius: 50%; border: 3px solid #1a5c38;
-        }
-        .timeline-tahun { font-weight: bold; color: #1a5c38; font-size: 18px; margin-bottom: 5px; }
-        .timeline-desc { color: #444; line-height: 1.7; font-size: 16px; }
+        /* === KEGIATAN & FOTO === */
+        .kegiatan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
+        .kegiatan-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: transform 0.3s; }
+        .kegiatan-card:hover { transform: translateY(-5px); }
+        .kegiatan-img { width: 100%; height: 220px; object-fit: cover; }
+        .kegiatan-content { padding: 20px; }
+        .kegiatan-judul { font-size: 20px; font-weight: bold; color: #1a5c38; margin-bottom: 10px; }
+        .kegiatan-desc { font-size: 16px; color: #555; }
+        video, img { max-width: 100%; border-radius: 8px; margin: 12px 0; }
 
-        /* === ID MASJID === */
-        .id-masjid-box {
-            background: linear-gradient(135deg, #e8f5ed 0%, #c8e6d0 100%);
-            border: 3px solid #1a5c38; border-radius: 14px;
-            padding: 25px 20px; margin: 25px 0; text-align: center;
-            box-shadow: 0 4px 12px rgba(26,92,56,0.15);
-        }
-        .id-masjid-box img { max-width: 360px; width: 100%; border-radius: 10px; border: 3px solid #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.2); margin-top: 10px; }
-        
-        /* === KEGIATAN — KARTU === */
-        .kegiatan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-top: 20px; }
-        .kegiatan-kartu {
-            background: white; padding: 18px; border-radius: 12px; border-left: 5px solid #1a5c38;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.08); transition: transform 0.3s;
-        }
-        .kegiatan-kartu:hover { transform: translateY(-3px); }
-        .kegiatan-kartu h4 { color: #1a5c38; font-size: 17px; margin-bottom: 8px; }
-        .kegiatan-kartu .waktu { font-size: 14px; color: #8b4513; font-weight: 500; margin-bottom: 10px; }
-        
-        /* === GOWES — CIRI KHAS === */
-        .gowes-spesial {
-            background: linear-gradient(135deg, #e8f5ed, #c8e6d0); border: 3px solid #1a5c38;
-            border-radius: 14px; padding: 25px; margin: 30px 0;
-        }
-        .gowes-spesial h3 { font-size: 20px; text-align: center; margin-bottom: 15px; }
-        
-        /* === PENGURUS & PENGAJAR === */
-        .pengajar-box {
-            background: linear-gradient(135deg, #fff9e6, #fff3cc); border: 3px solid #d4a900;
-            border-radius: 14px; padding: 22px; margin: 25px 0;
-        }
-        .pengajar-box h3 { text-align: center; margin-bottom: 18px; }
-        .pengurus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; text-align: center; }
-        .pengurus-card { background: white; padding: 15px; border-radius: 10px; border-top: 4px solid #1a5c38; }
-        .pengurus-card strong { display: block; color: #1a5c38; font-size: 16px; margin-bottom: 3px; }
-        .pengurus-card .jabatan { color: #8b4513; font-size: 14px; }
-        
-        /* === DONASI === */
-        .donasi-box {
-            background: linear-gradient(135deg, #fff9e6, #fff3cc); border: 3px solid #d4a900;
-            border-radius: 14px; padding: 22px; margin: 25px 0;
-        }
-        .donasi-untuk { columns: 2; margin: 15px 0; }
-        .donasi-untuk p { margin-bottom: 5px; }
-        
-        /* === KONTAK & PETA === */
-        .kontak-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-        .btn-maps {
-            display: block; text-align: center; background: #4285F4; color: white !important;
-            padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 10px;
-        }
-        .btn-wa {
-            display: block; text-align: center; background: #25D366; color: white !important;
-            padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 10px;
-        }
-        
+        /* === DUKUNG KAMI === */
+        .donasi-box { background: linear-gradient(135deg, #1a5c38, #2d7a50); color: white; padding: 35px; border-radius: 12px; text-align: center; }
+        .rekening { background: rgba(255,255,255,0.15); padding: 20px; border-radius: 8px; margin: 15px 0; font-size: 20px; font-weight: bold; }
+
         /* === FOOTER === */
-        footer { background: #145230; color: white; text-align: center; padding: 25px 15px; margin-top: 40px; font-size: 15px; }
-        footer p { margin-bottom: 5px; }
-        
-        /* === FOTO & VIDEO === */
-        .foto-kegiatan { width: 100%; max-width: 400px; border-radius: 10px; margin-top: 10px; box-shadow: 0 3px 8px rgba(0,0,0,0.12); }
-        .foto-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 15px; }
-        .foto-grid img { width: 100%; border-radius: 8px; }
-        .video-kegiatan { width: 100%; max-width: 480px; border-radius: 10px; margin-top: 10px; background: #000; }
-        hr { border: none; border-top: 2px dashed #ccc; margin: 30px 0; }
-        
-        /* === RESPONSIVE === */
-        @media (max-width: 600px) {
-            .donasi-untuk { columns: 1; }
-            .kontak-grid { grid-template-columns: 1fr; }
-            .jadwal-grid { gap: 4px; }
-            .hero-banner h2 { font-size: 22px; }
-            .timeline { padding-left: 25px; }
-        }
+        footer { background: #1a5c38; color: white; padding: 40px 25px; text-align: center; margin-top: 60px; }
+        .footer-ayat { font-size: 17px; font-style: italic; max-width: 800px; margin: 0 auto 20px; opacity: 0.9; }
+        .footer-info { font-size: 16px; line-height: 1.8; }
+
+        /* === SCROLL ANCHOR OFFSET === */
+        section { scroll-margin-top: 90px; }
     </style>
 </head>
 <body>
 
-<!-- === HEADER ATAS — LOGO & NAMA === -->
-<div class="top-header">
-    <div class="logo-dkm">
-        <img src="file_000000007b9c6230abbe697983711c0d.png" alt="Logo DKM Nurul Ukhuwah">
+<!-- ==================== HEADER & NAVIGASI ==================== -->
+<header class="top-header">
+    <div class="logo-section">
+        <div class="masjid-name">MASJID NURUL UKHUWAH</div>
+        <div class="masjid-sub">Donan, Cilacap Tengah — TBW 53222</div>
     </div>
-    <div class="judul-masjid">
-        <h1>🕌 MASJID NURUL UKHUWAH</h1>
-        <p>Jl. Kutilang Barat — Donan, Cilacap Tengah, Jawa Tengah</p>
-    </div>
-</div>
+    <nav>
+        <ul>
+            <li><a href="#beranda" class="active">Beranda</a></li>
+            <li><a href="#tentang">Tentang</a></li>
+            <li><a href="#kegiatan">Kegiatan</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+            <li><a href="#dukung" class="donate-btn">Dukung Kami</a></li>
+        </ul>
+    </nav>
+</header>
 
-<!-- === BANNER UTAMA — FOTO ASLI MASJID === -->
-<div class="hero-banner">
-    <h2>MARI MENGENAL<br>MASJID NURUL UKHUWAH</h2>
-    <p class="slogan">🏠 Tempat Ibadah &nbsp;|&nbsp; 📖 Tempat Menuntut Ilmu &nbsp;|&nbsp; 🤝 Tempat Tumbuhnya Ukhuwah<br><br>
-    Sebuah masjid di tengah masyarakat Donan, Cilacap — yang terus bertumbuh melalui ibadah, ilmu, silaturahmi, dan berbagai kegiatan kebaikan.</p>
-    <div>
-        <a href="#tentang" class="btn btn-emas">📖 Kenali Perjalanan Kami</a>
-        <a href="#kegiatan" class="btn btn-putih">📚 Lihat Kegiatan</a>
-    </div>
-</div>
-
-<!-- === NAVIGASI === -->
-<nav>
-    <a href="#beranda">🏠 Beranda</a>
-    <a href="#tentang">📖 Tentang</a>
-    <a href="#kegiatan">📚 Kegiatan</a>
-    <a href="#kontak">📞 Kontak</a>
-    <a href="#dukung">🤲 Dukung</a>
-</nav>
-
-<!-- === BERANDA === -->
-<section id="beranda">
-    <!-- === ACARA TERDEKAT === -->
-    <div class="acara-terdekat">
-        <h3>📅 ACARA TERDEKAT</h3>
-        <p class="acara-kosong">Belum ada agenda khusus yang akan datang.<br>Silakan lihat kegiatan rutin Masjid Nurul Ukhuwah di bawah ini. 🤲</p>
-        <br>
-        <a href="#kegiatan" class="btn btn-emas">📚 Lihat Kegiatan Rutin</a>
-    </div>
-
-    <!-- === JADWAL SHOLAT === -->
-    <div class="jadwal-sholat">
-        <h3>🕌 JADWAL SHOLAT — Cilacap Tengah</h3>
-        <p>* Waktu diperbarui berkala — dapat berubah setiap hari</p>
-        <div class="jadwal-grid">
-            <div class="jadwal-box"><strong>Subuh</strong><span>04.32</span></div>
-            <div class="jadwal-box"><strong>Dzuhur</strong><span>11.45</span></div>
-            <div class="jadwal-box"><strong>Ashar</strong><span>15.05</span></div>
-            <div class="jadwal-box"><strong>Maghrib</strong><span>17.40</span></div>
-            <div class="jadwal-box"><strong>Isya</strong><span>18.55</span></div>
+<!-- ==================== FOTO UTAMA & SELAMAT DATANG ==================== -->
+<section id="beranda" class="hero">
+    <img src="file_0000000025c482119237d6c735814230.png" alt="Masjid Nurul Ukhuwah — Donan, Cilacap" class="hero-img">
+    <div class="hero-overlay">
+        <p class="hero-subtitle">Mari Mengenal</p>
+        <h1 class="hero-title">MASJID NURUL UKHUWAH</h1>
+        <p class="hero-desc">Sebuah masjid di tengah masyarakat Donan, Cilacap — tempat ibadah, menuntut ilmu, dan tumbuhnya ukhuwah. Berlandaskan Ahlussunah Wal Jama'ah, berdiri sejak 2008 dan terus berkembang hingga hari ini.</p>
+        <div class="hero-buttons">
+            <a href="#tentang" class="btn btn-primary">📖 Kenali Kami</a>
+            <a href="#kegiatan" class="btn btn-secondary">📅 Lihat Kegiatan</a>
         </div>
     </div>
 </section>
 
-<!-- === TENTANG & SEJARAH === -->
-<section id="tentang">
-    <h2>📖 Perjalanan Masjid Nurul Ukhuwah</h2>
-    
-    <!-- === ID MASJID RESMI === -->
-    <div class="id-masjid-box">
-        <h3>🏛️ Identitas Resmi — Kemenag RI</h3>
-        <p style="font-size:18px; font-weight:bold; color:#0f3d24; margin:8px 0;">MASJID NURUL UKHUWAH</p>
-        <p style="font-size:15px;"><strong>Nomor ID:</strong> 01.6.14.01.22.000105</p>
-        <img src="IMG_20260818_084333.jpg" alt="Kartu Identitas Masjid — Kemenag RI">
-        <p style="font-size:13px; color:#666; margin-top:10px;">Terdaftar resmi di SIMAS — Kementerian Agama Republik Indonesia</p>
-    </div>
+<!-- ==================== AGENDA, JADWAL SHOLAT & LOKASI ==================== -->
+<section class="container">
+    <div class="agenda-grid">
+        <!-- === ACARA TERDEKAT === -->
+        <div class="agenda-card">
+            <h3 class="agenda-title">📅 Acara Terdekat</h3>
+            <p>Belum ada agenda khusus dalam waktu dekat.<br>Silakan lihat kegiatan rutin di bawah ini.</p>
+        </div>
 
-    <!-- === SEJARAH — TIMELINE === -->
-    <div class="perjalanan-box">
-        <h3 style="text-align:center; margin-bottom:25px;">📖 Cerita Perjalanan Masjid</h3>
+        <!-- === JADWAL SHOLAT === -->
+        <div class="agenda-card">
+            <h3 class="agenda-title">🕌 Jadwal Sholat</h3>
+            <table class="sholat-table">
+                <tr><th>Subuh</th><th>Dzuhur</th><th>Ashar</th><th>Maghrib</th><th>Isya</th></tr>
+                <tr><td>04.32</td><td>11.45</td><td>15.05</td><td>17.40</td><td>18.55</td></tr>
+            </table>
+            <p class="sholat-note">*Waktu dapat berubah — silakan cek pengumuman di masjid atau jadwal terbaru.</p>
+        </div>
+
+        <!-- === LOKASI & KONTAK === -->
+        <div class="lokasi-card">
+            <h3 class="agenda-title">📍 Lokasi Masjid</h3>
+            <p>Jl. Kutilang Barat<br>RT 01 RW XI, Kel. Donan<br>Cilacap Tengah, Jawa Tengah<br>📮 53222 — TBW (Tambak Wareng)</p>
+            <a href="https://maps.google.com/maps?q=Masjid+Nurul+Ukhuwah+IKADI+Donan+Cilacap,+Jawa+Tengah,+ID&sll=-7.716979503631592,109.0044174194336" target="_blank" class="lokasi-btn">🔗 Lihat di Google Maps</a>
+            <div style="margin-top:15px; padding-top:15px; border-top:1px solid #eee;">
+                <p>📧 nurulukhuwahmasjid@gmail.com</p>
+                <p>📞 WA: +62 838-7260-5334</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== TENTANG & SEJARAH ==================== -->
+<section id="tentang" style="background:white; padding:60px 0;">
+    <div class="container">
+        <h2 class="section-title">Tentang Masjid Nurul Ukhuwah</h2>
+        
+        <div class="card" style="max-width:900px; margin:0 auto 50px;">
+            <p style="font-size:18px; margin-bottom:20px; text-align:justify;">
+                <strong>Masjid Nurul Ukhuwah</strong> berdiri pada tahun <strong>2008</strong> oleh <strong>IKADI (Ikatan Dai Indonesia)</strong>, didirikan atas bantuan dana dari Uni Emirat Arab. Selama bertahun-tahun dikenal masyarakat sekitar sebagai <em>Masjid IKADI</em>.
+            </p>
+            <p style="font-size:18px; margin-bottom:20px; text-align:justify;">
+                Pada tanggal <strong>10 Maret 2021</strong>, dilakukan reorganisasi pengurus sekaligus pergantian nama menjadi <strong>Masjid Nurul Ukhuwah</strong> — disaksikan oleh para tokoh masyarakat dan jamaah.
+            </p>
+            <p style="font-size:18px; text-align:justify;">
+                Masjid ini berlandaskan <strong>Ahlussunah Wal Jama'ah</strong> dan <strong>tidak berafiliasi</strong> dengan organisasi tertentu. Kami bertekad menjadikan masjid bukan hanya tempat sholat, melainkan pusat kegiatan umat — tempat belajar, berkumpul, dan mempererat tali persaudaraan.
+            </p>
+        </div>
+
+        <h3 style="text-align:center; font-size:26px; color:#1a5c38; margin-bottom:40px;">Perjalanan Masjid</h3>
         <div class="timeline">
             <div class="timeline-item">
-                <div class="timeline-tahun">🏛️ 2008</div>
-                <div class="timeline-desc">
-                    Masjid dibangun oleh <strong>Ikatan Dai Indonesia (IKADI)</strong> dengan dukungan dana dari Pemerintah Persatuan Emirat Arab. Dikenal masyarakat sekitar sebagai <strong>Masjid IKADI</strong>. Tanah telah diwakafkan secara resmi seluas 469 m².
-                </div>
+                <div class="timeline-dot"></div>
+                <div class="timeline-year">2008</div>
+                <p><strong>Masjid Dibangun</strong><br>Oleh IKADI — Ikatan Dai Indonesia. Dikenal masyarakat sebagai Masjid IKADI.</p>
             </div>
-            
             <div class="timeline-item">
-                <div class="timeline-tahun">🤝 10 Maret 2021</div>
-                <div class="timeline-desc">
-                    Dilakukan <strong>reorganisasi & penyerahan pengelolaan</strong> melalui musyawarah mufakat. Nama resmi ditetapkan menjadi <strong>Masjid Nurul Ukhuwah</strong> — bermakna tempat tumbuhnya persaudaraan sesama umat Islam.
-                </div>
+                <div class="timeline-dot"></div>
+                <div class="timeline-year">10 Maret 2021</div>
+                <p><strong>Reorganisasi & Pergantian Nama</strong><br>Berganti nama menjadi <strong>Masjid Nurul Ukhuwah</strong> — Cahaya Persaudaraan.</p>
             </div>
-            
             <div class="timeline-item">
-                <div class="timeline-tahun">🕌 Hingga Hari Ini</div>
-                <div class="timeline-desc">
-                    Terus berkembang dengan kegiatan: <strong>Ibadah 5 waktu • Pengajian & ilmu • Silaturahmi • Kegiatan sosial • Pembinaan masyarakat</strong>. Berpegang teguh pada Al-Qur'an & As-Sunnah sesuai pemahaman Ahlussunnah wal Jama'ah — terbuka untuk seluruh umat Islam.
-                </div>
+                <div class="timeline-dot"></div>
+                <div class="timeline-year">Hingga Kini</div>
+                <p><strong>Terus Berkembang</strong><br>Berbagai kegiatan pendidikan Al-Qur'an, pengajian, sosial, dan dakwah terus berjalan dan berkembang.</p>
             </div>
         </div>
-    </div>
-
-    <!-- === PENGURUS === -->
-    <div class="pengajar-box">
-        <h3>👥 Pengurus Masjid</h3>
-        <div class="pengurus-grid">
-            <div class="pengurus-card">
-                <strong>Sulistiyono, AMR</strong>
-                <span class="jabatan">Ketua</span>
-                <p style="font-size:14px; margin-top:5px;"><a href="https://wa.me/6281327530681" target="_blank" style="color:#1a5c38; text-decoration:none;">📞 Hubungi</a></p>
-            </div>
-            <div class="pengurus-card">
-                <strong>Aditia Nugroho</strong>
-                <span class="jabatan">Sekretaris</span>
-                <p style="font-size:14px; margin-top:5px;"><a href="https://wa.me/6281311509584" target="_blank" style="color:#1a5c38; text-decoration:none;">📞 Hubungi</a></p>
-            </div>
-            <div class="pengurus-card">
-                <strong>Supriyatno</strong>
-                <span class="jabatan">Bendahara</span>
-                <p style="font-size:14px; margin-top:5px;"><a href="https://wa.me/6283872605334" target="_blank" style="color:#1a5c38; text-decoration:none;">📞 Hubungi</a></p>
-            </div>
-        </div>
-        
-        <hr style="margin:20px 0; border-top:2px dashed #d4a900;">
-        
-        <h3 style="font-size:17px;">🌿 Para Ustadz & Ustadzah Pengajar</h3>
-        <p style="text-align:center; margin-top:10px; line-height:1.8;">
-            Ustadz — Fikih & Tahsinul Qur'an (Malam Kamis)<br>
-            Ustadzah — Iqro' & Al-Qur'an Ibu-ibu (Selasa & Jumat)<br>
-            Ustadz/Ustadzah — Pengajian Umum Bulanan<br>
-            <em style="color:#555; font-size:14px; margin-top:8px; display:block;">Semoga Allah membalas keikhlasan mereka dengan sebaik-baik balasan. 🤲</em>
-        </p>
-    </div>
-
-    <!-- === PERAWATAN MASJID === -->
-    <div class="info-box">
-        <h3>🔧 Perawatan & Perbaikan</h3>
-        <p>Senantiasa menjaga dan memelihara rumah Allah — dari perbaikan atap, fasilitas, hingga perawatan alat ibadah.</p>
-        <img src="IMG-20260816-WA0010(1).jpg" alt="Perbaikan Masjid" class="foto-kegiatan">
-        <p style="margin-top:10px;"><a href="https://vt.tiktok.com/ZSVNTkbFc/" target="_blank">🎬 Video Perbaikan Pengeras Suara Adzan</a></p>
-        <p style="margin-top:5px;"><a href="https://vt.tiktok.com/ZSVNwfCHQ/" target="_blank">🔧 Persiapan & Perbaikan Tempat Penyembelihan Qurban</a></p>
     </div>
 </section>
 
-<!-- === KEGIATAN === -->
-<section id="kegiatan">
-    <h2>🕌 KEHIDUPAN DI MASJID NURUL UKHUWAH</h2>
-    <p style="text-align:center; color:#555; margin-bottom:25px;">Berikut kegiatan rutin yang senantiasa kami laksanakan — semoga bermanfaat dan mengundang keberkahan. 🤲</p>
+<!-- ==================== KEGIATAN MASJID ==================== -->
+<section id="kegiatan" class="container">
+    <h2 class="section-title">Kehidupan Masjid & Kegiatan Rutin</h2>
+    <p style="text-align:center; font-size:18px; color:#666; margin-bottom:40px;">Berbagai kegiatan yang menjadi nadi kehidupan masjid — dari ibadah, pendidikan, hingga silaturahmi</p>
 
-    <!-- === KARTU KEGIATAN === -->
     <div class="kegiatan-grid">
-        <div class="kegiatan-kartu">
-            <h3>🕌 Setiap Hari</h3>
-            <p class="waktu">Ba'da Maghrib — sebelum Isya</p>
-            <p>Mengaji, berzikir, dan memperdalam ilmu agama bersama jamaah.</p>
-            <video controls class="video-kegiatan">
-                <source src="VID-20260819-WA0004.mp4" type="video/mp4">
-            </video>
-            <p class="waktu" style="margin-top:15px;">Ba'da Subuh — sampai Syuruk</p>
-            <p>Menetap di masjid, berzikir, dan menunggu waktu Syuruk — momen penuh pahala.</p>
-            <video controls class="video-kegiatan">
-                <source src="VID-20260819-WA0006.mp4" type="video/mp4">
-            </video>
-        </div>
-
-        <div class="kegiatan-kartu">
-            <h3>📖 Ibu-ibu — Iqro' & Al-Qur'an</h3>
-            <p class="waktu">Setiap Selasa & Jumat · 16.00–17.30 WIB</p>
-            <p>Bersama Ustadzah. Alhamdulillah tumbuh dari 3 orang menjadi 13 orang dalam 4 bulan! Semoga terus bertambah. 🤲</p>
-            <video controls class="video-kegiatan">
-                <source src="VID-20260819-WA0012.mp4" type="video/mp4">
-            </video>
-        </div>
-
-        <div class="kegiatan-kartu">
-            <h3>📚 Tahsinul Qur'an & Fikih</h3>
-            <p class="waktu">Setiap Malam Kamis · Ba'da Maghrib</p>
-            <p>Belajar membaca Al-Qur'an dengan tajwid yang benar dan ilmu Fikih bersama Ustadz.</p>
-            <video controls class="video-kegiatan">
-                <source src="VID-20260816-WA0004.mp4" type="video/mp4">
-            </video>
-        </div>
-
-        <div class="kegiatan-kartu">
-            <h3>📖 Pengajian Umum Bulanan</h3>
-            <p class="waktu">Setiap Ahad Minggu Ketiga · Ba'da Ashar</p>
-            <p>Terbuka untuk seluruh jamaah, warga RW XI dan sekitar. Bersama Ustadz/Ustadzah.</p>
-            <video controls class="video-kegiatan">
-                <source src="VID-20260816-WA0016.mp4" type="video/mp4">
-            </video>
-        </div>
-
-        <div class="kegiatan-kartu">
-            <h3>📖 Program Katam Al-Qur'an</h3>
-            <p class="waktu">Setiap Ahad · 09.00–10.00 WIB</p>
-            <p>Bersama-sama membaca Al-Qur'an dengan target penyelesaian bersama.</p>
-            <img src="IMG-20260814-WA0015.jpg" alt="Program Katam" class="foto-kegiatan">
-        </div>
-
-        <div class="kegiatan-kartu">
-            <h3>🕌 Sholat Jumat Berjamaah</h3>
-            <p class="waktu">Setiap Hari Jumat</p>
-            <p>Sholat berjamaah dengan Imam dan Khatib — keutamaan hari Jumat di masjid.</p>
-        </div>
-    </div>
-
-    <!-- === GOWES — CIRI KHAS === -->
-    <div class="gowes-spesial">
-        <h3>🚴 DARI MASJID, MENGAYUH UKHUWAH — Gowes Bersama</h3>
-        <p style="text-align:center; font-size:16px; line-height:1.8; margin-bottom:20px;">
-            <strong>Setiap Ahad Pagi — Ba'da Sholat Subuh · Jarak 30–50 km</strong><br>
-            Bukan sekadar olahraga. Ini dakwah dengan sepeda — menjaga kesehatan, mempererat silaturahmi, mengenalkan masjid kepada masyarakat luas, dan mengajak teman-teman untuk menjadi jamaah yang rutin sholat 5 waktu. 🤲
-        </p>
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:12px;">
-            <div>
-                <strong>▶️ Persiapan & Start</strong><br>
-                <img src="IMG-20260719-WA0008.jpg" alt="Persiapan Gowes" class="foto-kegiatan">
-                <video controls class="video-kegiatan"><source src="VID-20260818-WA0014.mp4" type="video/mp4"></video>
-            </div>
-            <div>
-                <strong>📍 Titik Nol Cilacap</strong><br>
-                <img src="IMG-20260719-WA0009.jpg" alt="Titik Nol" class="foto-kegiatan">
-            </div>
-            <div>
-                <strong>🛣️ Perjalanan</strong><br>
-                <img src="IMG-20260719-WA0005(1).jpg" alt="Perjalanan" class="foto-kegiatan">
-            </div>
-            <div>
-                <strong>🍛 Sarapan Bersama di GOR</strong><br>
-                <img src="IMG-20260719-WA0006.jpg" alt="Makan Bersama" class="foto-kegiatan">
+        <!-- === IQRO' & BELAJAR AL-QUR'AN IBU-IBU === -->
+        <div class="kegiatan-card">
+            <img src="IMG-20260814-WA0015.jpg" alt="Iqro' Ibu-ibu" class="kegiatan-img">
+            <div class="kegiatan-content">
+                <h3 class="kegiatan-judul">📖 Iqro' & Belajar Al-Qur'an — Ibu-ibu</h3>
+                <p class="kegiatan-desc">Setiap <strong>Selasa & Jumat</strong> ba'da Ashar — dibimbing oleh Ustadzah. Berawal dari 3 orang, kini telah berkembang menjadi 13 jamaah. Alhamdulillah!</p>
+                <video controls>
+                    <source src="VID-20260819-WA0012.mp4" type="video/mp4">
+                    <source src="VID-20260819-WA0013.mp4" type="video/mp4">
+                    Peramban tidak mendukung pemutaran video.
+                </video>
             </div>
         </div>
-    </div>
 
-    <!-- === RAMADHAN === -->
-    <div class="info-box">
-        <h3>🌙 Bulan Ramadhan</h3>
-        <ul style="margin-left:20px; line-height:2; font-size:15px;">
-            <li>✅ Pengajian umum 4x setiap Ahad ba'da Ashar + pembagian nasi kotak buka puasa</li>
-            <li>✅ Sholat Tarawih & Kultum Subuh</li>
-            <li>✅ I'tikaf 10 hari terakhir Ramadhan</li>
-            <li>✅ Buka puasa bersama pengurus masjid</li>
-        </ul>
-        <div style="margin-top:15px; display:grid; gap:12px;">
-            <span class="video-judul">📖 Pengajian Ramadhan</span>
-            <video controls class="video-kegiatan"><source src="VID-20260816-WA0006.mp4" type="video/mp4"></video>
-            <span class="video-judul">Taraweh & Kultum Subuh</span>
-            <video controls class="video-kegiatan"><source src="VID-20260816-WA0007.mp4" type="video/mp4"></video>
-            <span class="video-judul">🎬 I'tikaf 10 Hari Terakhir</span>
-            <video controls class="video-kegiatan"><source src="VID-20260815-WA0029.mp4" type="video/mp4"></video>
-        </div>
-    </div>
-
-    <!-- === QURBAN === -->
-    <div class="info-box">
-        <h3>🐑 Idul Adha — Qurban & Berbagi</h3>
-        <p style="line-height:1.8;">Setiap tahun Alhamdulillah menyembelih minimal 2 ekor sapi. Penyembelihan dilakukan sendiri oleh tim yang telah bersertifikat pelatihan Juleha — sesuai syariat, tidak menyakiti hewan, dan darah terkuras habis. Daging dikemas spesial untuk shohibul qurban dan dibagikan kepada warga sekitar.</p>
-        <p style="font-weight:bold; color:#1a5c38; margin-top:10px;">💰 Program Tabungan Qurban — sudah diikuti 7 calon shohibul qurban! Semoga bertambah.</p>
-        <div class="foto-grid" style="margin-top:15px;">
-            <img src="IMG-20260819-WA0015.jpg" alt="Sertifikat Juleha">
-            <img src="IMG-20260819-WA0017.jpg" alt="Sertifikat Juleha">
-            <img src="IMG-20260819-WA0018.jpg" alt="Tim Penyembelih">
-            <img src="IMG-20260819-WA0016.jpg" alt="Kemasan Daging">
-            <img src="IMG-20260817-WA0039.jpg" alt="Qurban">
-            <img src="IMG-20260817-WA0038.jpg" alt="Qurban">
-            <img src="IMG-20260817-WA0037.jpg" alt="Qurban">
-            <img src="IMG-20260817-WA0036.jpg" alt="Qurban">
-        </div>
-    </div>
-
-    <!-- === SOSIAL === -->
-    <div class="info-box">
-        <h3>📦 Kegiatan Sosial</h3>
-        <p><strong>Penyaluran Parcel Idul Fitri</strong> — berbagi kebersamaan kepada warga sekitar.</p>
-        <video controls class="video-kegiatan"><source src="VID-20260817-WA0005.mp4" type="video/mp4"></video>
-    </div>
-</section>
-
-<!-- === KONTAK === -->
-<section id="kontak">
-    <h2>📍 Datang & Hubungi Kami</h2>
-    <div class="info-box">
-        <div class="kontak-grid">
-            <div>
-                <h3>📍 Alamat Lengkap</h3>
-                <p>Jl. Kutilang Barat<br>
-                RT 01 RW XI, Kelurahan Donan<br>
-                Kec. Cilacap Tengah, Kab. Cilacap<br>
-                Jawa Tengah — 53222</p>
-                <a href="https://www.google.com/maps/search/?api=1&query=Masjid+Nurul+Ukhuwah+Jl.+Kutilang+Barat+Donan+Cilacap+Tengah" target="_blank" class="btn-maps">📍 Buka di Google Maps</a>
+        <!-- === KATAM AL-QUR'AN === -->
+        <div class="kegiatan-card">
+            <div class="kegiatan-content">
+                <h3 class="kegiatan-judul">📖 Katam Al-Qur'an</h3>
+                <p class="kegiatan-desc">Setiap <strong>Ahad pagi</strong> pukul 09.00 — 10.00 WIB. Membaca Al-Qur'an bersama menuju khatam.</p>
             </div>
-            <div>
-                <h3>📞 Hubungi Pengurus</h3>
-                <p><strong>Ketua — Sulistiyono</strong><br>
-                <a href="https://wa.me/6281327530681" target="_blank" class="btn-wa">💬 WhatsApp: +62 813-2753-0681</a></p>
-                <p style="margin-top:10px;"><strong>Sekretaris — Aditia Nugroho</strong><br>
-                <a href="https://wa.me/6281311509584" target="_blank" class="btn-wa">💬 WhatsApp: +62 813-1150-9584</a></p>
-                <p style="margin-top:10px;"><strong>Bendahara — Supriyatno</strong><br>
-                <a href="https://wa.me/6283872605334" target="_blank" class="btn-wa">💬 WhatsApp: +62 838-7260-5334</a></p>
+        </div>
+
+        <!-- === PENGAJIAN BAPAK-BAPAK — FIKIH & TAHSIN === -->
+        <div class="kegiatan-card">
+            <div class="kegiatan-content">
+                <h3 class="kegiatan-judul">🕌 Pengajian Fikih & Tahsinul Qur'an — Bapak-bapak</h3>
+                <p class="kegiatan-desc">Setiap <strong>Malam Kamis</strong> ba'da Maghrib — menjelang Isya. Dibimbing oleh 2 Ustadz yang ikhlas tanpa imbalan. Belajar fikih dasar dan perbaikan bacaan Al-Qur'an.</p>
+            </div>
+        </div>
+
+        <!-- === PENGAJIAN UMUM === -->
+        <div class="kegiatan-card">
+            <div class="kegiatan-content">
+                <h3 class="kegiatan-judul">🕌 Pengajian Umum Bulanan</h3>
+                <p class="kegiatan-desc">Setiap <strong>Ahad ketiga</strong> ba'da Ashar — terbuka untuk seluruh jamaah dan warga sekitar. Hadir Ustadz/Ustadzah sebagai pembicara.</p>
+            </div>
+        </div>
+
+        <!-- === GOWES BERSAMA === -->
+        <div class="kegiatan-card">
+            <img src="IMG-20260719-WA0008.jpg" alt="Gowes Bersama" class="kegiatan-img">
+            <div class="kegiatan-content">
+                <h3 class="kegiatan-judul">🚲 Gowes Bersama — Ahad Pagi</h3>
+                <p class="kegiatan-desc">Setiap <strong>Ahad pagi</strong> ba'da Subuh — rute 30–50 km. Bertujuan untuk kesehatan sekaligus dakwah melalui silaturahmi. Semoga tumbuh menjadi jamaah masjid yang aktif!</p>
+                <img src="IMG-20260719-WA0009.jpg" alt="Titik Nol">
+                <video controls>
+                    <source src="VID-20260818-WA0014.mp4" type="video/mp4">
+                    Video Gowes Bersama
+                </video>
+            </div>
+        </div>
+
+        <!-- === RAMADHAN === -->
+        <div class="kegiatan-card">
+            <div class="kegiatan-content">
+                <h3 class="kegiatan-judul">🌙 Kegiatan Ramadhan</h3>
+                <p class="kegiatan-desc">• Pengajian Umum 4x setiap Ahad ba'da Ashar + pembagian nasi kotak buka puasa<br>• Sholat Tarawih & Kultum Subuh<br>• I'tikaf 10 hari terakhir Ramadhan<br>• Buka puasa bersama pengurus</p>
+                <video controls>
+                    <source src="VID-20260815-WA0029.mp4" type="video/mp4">
+                    Video I'tikaf
+                </video>
+            </div>
+        </div>
+
+        <!-- === QURBAN JULEHA BERSERTIFIKAT === -->
+        <div class="kegiatan-card">
+            <img src="IMG-20260819-WA0018.jpg" alt="Tim Juleha Bersertifikat" class="kegiatan-img">
+            <div class="kegiatan-content">
+                <h3 class="kegiatan-judul">🐏 Qurban — Juleha Bersertifikat</h3>
+                <p class="kegiatan-desc">Kami <strong>menyembelih sendiri</strong> — bukan penyembelih bayaran. Tim kami telah mengikuti pelatihan Juleha dan <strong>bersertifikat</strong>. Menggunakan alat standar pelatihan — bilah super tajam, tali penahan, hingga proses pengulitan dan pencacahan. Daging dikemas khusus untuk Shohibul Qurban dan dibagikan ke masyarakat sekitar.</p>
+                <p><strong>📌 Program Tabungan Qurban</strong> — tersedia setiap saat! Tahun ini telah diikuti 7 calon Shohibul Qurban.</p>
+                <img src="IMG-20260819-WA0015.jpg" alt="Sertifikat Juleha">
+                <img src="IMG-20260819-WA0017.jpg" alt="Sertifikat Juleha">
+                <img src="IMG-20260819-WA0016.jpg" alt="Ember Kemasan Shohibul Qurban">
+            </div>
+        </div>
+
+        <!-- === PENYALURAN PARCEL IDUL FITRI === -->
+        <div class="kegiatan-card">
+            <div class="kegiatan-content">
+                <h3 class="kegiatan-judul">📦 Penyaluran Parcel Idul Fitri</h3>
+                <p class="kegiatan-desc">Berbagi kebersamaan dan kebahagiaan kepada warga sekitar masjid — semoga menjadi amal jariyah yang terus mengalir pahalanya.</p>
+                <video controls>
+                    <source src="VID-20260816-WA0004.mp4" type="video/mp4">
+                    Video Penyaluran Parcel
+                </video>
+            </div>
+        </div>
+
+        <!-- === RUTINITAS BA'DA MAGHRIB & SUBUH === -->
+        <div class="kegiatan-card">
+            <div class="kegiatan-content">
+                <h3 class="kegiatan-judul">✨ Rutinitas Ba'da Sholat</h3>
+                <p class="kegiatan-desc">Ba'da Maghrib hingga menjelang Isya, serta ba'da Subuh hingga sebelum Syuruk — zikir, tilawah, dan doa bersama. Semoga masjid semakin ramai dan makmur!</p>
+                <video controls>
+                    <source src="VID-20260819-WA0004.mp4" type="video/mp4">
+                    Video Ba'da Maghrib
+                </video>
+                <video controls>
+                    <source src="VID-20260819-WA0006.mp4" type="video/mp4">
+                    Video Ba'da Subuh
+                </video>
             </div>
         </div>
     </div>
 </section>
 
-<!-- === DUKUNG & DONASI === -->
-<section id="dukung">
-    <h2>🤲 Dukung Kegiatan Masjid</h2>
+<!-- ==================== KONTAK & PENGURUS ==================== -->
+<section id="kontak" style="background:white; padding:60px 0;">
+    <div class="container">
+        <h2 class="section-title">Kontak & Pengurus Masjid</h2>
+        
+        <div class="agenda-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+            <div class="agenda-card">
+                <h3 class="agenda-title">👤 Ketua</h3>
+                <p><strong>Sulistiyono</strong><br>📱 WA: +62 813-2753-0681</p>
+            </div>
+            <div class="agenda-card">
+                <h3 class="agenda-title">👤 Sekretaris</h3>
+                <p><strong>Supriyatno</strong><br>📱 WA: +62 838-7260-5334</p>
+            </div>
+            <div class="agenda-card">
+                <h3 class="agenda-title">👤 Pengurus</h3>
+                <p><strong>Aditia Nugroho</strong><br>📱 WA: +62 813-1150-9584</p>
+            </div>
+        </div>
+
+        <div class="card" style="max-width:700px; margin:40px auto 0; text-align:center;">
+            <h3 style="color:#1a5c38; margin-bottom:20px;">📬 Hubungi Kami</h3>
+            <p style="font-size:19px; margin-bottom:10px;">📧 <strong>nurulukhuwahmasjid@gmail.com</strong></p>
+            <p style="font-size:19px; margin-bottom:10px;">📱 <strong>WA: +62 838-7260-5334</strong></p>
+            <p style="font-size:19px;">📍 Jl. Kutilang Barat, RT 01 RW XI, Kel. Donan, Cilacap Tengah, Jawa Tengah — 53222</p>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== DUKUNG KAMI & DONASI ==================== -->
+<section id="dukung" class="container">
+    <h2 class="section-title">Dukung Kemakmuran Masjid</h2>
+    
     <div class="donasi-box">
-        <h3 style="text-align:center; margin-bottom:15px;">Untuk Apa Infak Digunakan?</h3>
-        <div class="donasi-untuk">
-            <p>✅ Operasional masjid</p>
-            <p>✅ Perawatan & perbaikan fasilitas</p>
-            <p>✅ Kegiatan kajian & pengajian</p>
-            <p>✅ Penghormatan untuk pengajar ilmu</p>
-            <p>✅ Kegiatan sosial & berbagi</p>
-            <p>✅ Ramadhan & Qurban</p>
+        <h3 style="font-size:26px; margin-bottom:20px;">💚 Sumbangan & Donasi</h3>
+        <p style="font-size:18px; margin-bottom:25px;">Segala bentuk infak dan sedekah akan digunakan untuk pemeliharaan masjid, kegiatan dakwah, pendidikan Al-Qur'an, dan kebutuhan operasional masjid. Semoga Allah SWT mengganti dengan yang lebih baik dan memberkahi harta Bapak/Ibu sekalian.</p>
+        
+        <div class="rekening">
+            <p>🏦 Bank Syariah Indonesia (BSI)</p>
+            <p style="font-size:24px; margin:8px 0;">7205811871</p>
+            <p>a.n. <strong>Masjid Nurul Ukhuwah</strong></p>
         </div>
-        <hr style="border-top:2px dashed #d4a900; margin:20px 0;">
-        <h3 style="text-align:center;">💳 Rekening Donasi</h3>
-        <p style="text-align:center; font-size:18px; margin-top:10px;">
-            Bank Syariah Indonesia (BSI)<br>
-            <strong>No. Rekening: 7205811871</strong><br>
-            a.n. <strong>Masjid Nurul Ukhuwah</strong>
-        </p>
-        <p style="text-align:center; margin-top:15px; font-style:italic; color:#555;">
-            Semoga Allah menerima setiap kebaikan dan melipatgandakan pahalanya. 🤲
-        </p>
+
+        <div style="margin-top:25px; padding-top:20px; border-top:1px solid rgba(255,255,255,0.2);">
+            <h4 style="font-size:20px; margin-bottom:10px;">🐏 Tabungan Qurban</h4>
+            <p>Program tabungan qurban tersedia setiap saat — bagi yang ingin menabung perlahan untuk hewan qurban tahun depan. Silakan hubungi pengurus untuk pendaftaran.</p>
+        </div>
     </div>
 </section>
 
-<!-- === FOOTER === -->
+<!-- ==================== FOOTER ==================== -->
 <footer>
-    <p style="font-size:18px; font-weight:bold;">🕌 Masjid Nurul Ukhuwah</p>
-    <p>Jl. Kutilang Barat — Donan, Cilacap Tengah, Jawa Tengah — 53222</p>
-    <p style="margin-top:10px; font-size:14px;">Terdaftar Resmi Kemenag RI · ID: 01.6.14.01.22.000105</p>
-    <p style="margin-top:8px; font-size:13px; opacity:0.8;">© 2026 — Semoga menjadi tempat yang diberkahi Allah SWT 🤲</p>
+    <p class="footer-ayat">❝ Sesungguhnya yang memakmurkan masjid Allah hanyalah orang-orang yang beriman kepada Allah dan hari akhir. ❞ — (QS. At-Taubah: 18)</p>
+    <div class="footer-info">
+        <h3 style="font-size:22px; margin-bottom:10px;">MASJID NURUL UKHUWAH</h3>
+        <p>Jl. Kutilang Barat, RT 01 RW XI, Kel. Donan, Cilacap Tengah, Jawa Tengah — 53222</p>
+        <p>Website: tbw-53222.github.io/masjid-nurul-ukhuwah | Email: nurulukhuwahmasjid@gmail.com</p>
+        <p style="margin-top:15px; opacity:0.8;">© 2026 Masjid Nurul Ukhuwah — TBW (Tambak Wareng). Semoga berkah.</p>
+    </div>
 </footer>
 
 </body>
