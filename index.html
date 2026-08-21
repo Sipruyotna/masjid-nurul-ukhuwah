@@ -38,7 +38,13 @@
             padding: 35px 25px;
             text-align: center;
         }
-        .hero-subtitle { font-size: 22px; font-style: italic; color: #b8860b; margin-bottom: 8px; }
+        .hero-subtitle { 
+            font-size: 28px; 
+            font-weight: bold; 
+            color: #1a5c38; 
+            margin-bottom: 15px; 
+            letter-spacing: 1px;
+        }
         .hero-title { font-size: 42px; font-weight: bold; color: #1a5c38; line-height: 1.2; margin-bottom: 15px; }
         .hero-desc { font-size: 18px; max-width: 800px; margin: 0 auto 25px; color: #444; line-height: 1.8; }
         .hero-buttons { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
@@ -87,7 +93,17 @@
         .kegiatan-content { padding: 20px; }
         .kegiatan-judul { font-size: 20px; font-weight: bold; color: #1a5c38; margin-bottom: 10px; }
         .kegiatan-desc { font-size: 16px; color: #555; }
-        video, img { max-width: 100%; border-radius: 8px; margin: 12px 0; }
+        
+        video { 
+            width: 100% !important; 
+            max-width: 100% !important; 
+            height: auto !important; 
+            border-radius: 8px; 
+            margin: 15px 0;
+            display: block;
+            background: #000;
+        }
+        img { max-width: 100%; border-radius: 8px; margin: 12px 0; }
         iframe { max-width: 100%; border-radius: 8px; margin: 12px 0; }
 
         .donasi-box { background: linear-gradient(135deg, #1a5c38, #2d7a50); color: white; padding: 35px; border-radius: 12px; text-align: center; }
@@ -124,7 +140,7 @@
 <section id="beranda" class="hero">
     <img src="file_0000000025c482119237d6c735814230.png" alt="Masjid Nurul Ukhuwah — Donan, Cilacap" class="hero-img">
     <div class="hero-text">
-        <p class="hero-subtitle">Mari Mengenal</p>
+        <p class="hero-subtitle">MARI MENGENAL</p>
         <h1 class="hero-title">MASJID NURUL UKHUWAH</h1>
         <p class="hero-desc">Sebuah masjid di tengah masyarakat Donan, Cilacap — tempat ibadah, menuntut ilmu, dan tumbuhnya ukhuwah.</p>
         <div class="hero-buttons">
@@ -134,8 +150,8 @@
     </div>
 </section>
 
-<section style="background:white; padding:40px 0;">
-    <div class="container" style="padding-bottom:0;">
+<section style="background:white; padding:25px 0;">
+    <div class="container" style="padding-bottom:0; padding-top:10px;">
         <h2 class="section-title" style="font-size:26px; margin-bottom:10px;">Kehidupan Masjid Kami</h2>
         <p style="text-align:center; color:#666; margin-bottom:25px;">Masjid ini terus hidup — setiap hari ada kegiatan, ada jamaah, ada kebaikan yang berjalan.</p>
         <div class="galeri-beranda">
@@ -167,21 +183,21 @@
     </div>
 </section>
 
-<section id="tentang" style="background:white; padding:60px 0;">
-    <div class="container">
-        <h2 class="section-title">Tentang Masjid Nurul Ukhuwah</h2>
-        <div class="card" style="max-width:900px; margin:0 auto 50px;">
-            <p style="font-size:18px; margin-bottom:20px; text-align:justify;">
-                <strong>Masjid Nurul Ukhuwah</strong> berdiri pada tahun <strong>2008</strong> oleh <strong>IKADI (Ikatan Dai Indonesia)</strong>, didirikan atas bantuan dana dari Uni Emirat Arab. Selama bertahun-tahun dikenal masyarakat sekitar sebagai <em>Masjid IKADI</em>.
+<section id="tentang" style="background:white; padding:40px 0;">
+    <div class="container" style="padding-top:20px; padding-bottom:20px;">
+        <h2 class="section-title" style="margin-bottom:25px;">Tentang Masjid Nurul Ukhuwah</h2>
+        <div class="card" style="max-width:900px; margin:0 auto 40px;">
+            <p style="font-size:18px; margin-bottom:20px; text-align:justify; line-height:1.8;">
+                <strong>Masjid Nurul Ukhuwah</strong> berdiri pada tahun <strong>2008</strong> oleh <strong>IKADI (Ikatan Dai Indonesia)</strong>, didirikan atas bantuan dana dari Uni Emirat Arab. <strong>Dan masyarakat luas & sekitar lebih mengenal masjid ini sebagai Masjid IKADI.</strong>
             </p>
-            <p style="font-size:18px; margin-bottom:20px; text-align:justify;">
+            <p style="font-size:18px; margin-bottom:20px; text-align:justify; line-height:1.8;">
                 Pada tanggal <strong>10 Maret 2021</strong>, dilakukan reorganisasi pengurus sekaligus pergantian nama menjadi <strong>Masjid Nurul Ukhuwah</strong> — Cahaya Persaudaraan — disaksikan oleh para tokoh masyarakat dan jamaah.
             </p>
-            <p style="font-size:18px; text-align:justify;">
+            <p style="font-size:18px; text-align:justify; line-height:1.8;">
                 Masjid ini berlandaskan <strong>Ahlussunah Wal Jama'ah</strong> dan <strong>tidak berafiliasi</strong> dengan organisasi tertentu. Kami bertekad menjadikan masjid bukan hanya tempat sholat, melainkan pusat kegiatan umat — tempat belajar, berkumpul, dan mempererat tali persaudaraan.
             </p>
         </div>
-        <h3 style="text-align:center; font-size:26px; color:#1a5c38; margin-bottom:40px;">Perjalanan Masjid</h3>
+        <h3 style="text-align:center; font-size:26px; color:#1a5c38; margin-bottom:30px;">Perjalanan Masjid</h3>
         <div class="timeline">
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
@@ -202,124 +218,205 @@
     </div>
 </section>
 
-<!-- ================================================== -->
-<!-- === KEGIATAN — SUDAH DIBERSIHKAN, TIDAK DOBEL === -->
-<!-- ================================================== -->
 <section id="kegiatan" class="container">
     <h2 class="section-title">Kegiatan Rutin Masjid</h2>
     <p style="text-align:center; font-size:18px; color:#666; margin-bottom:40px;">Berbagai kegiatan yang menjadi nadi kehidupan masjid — dari ibadah, pendidikan, hingga silaturahmi</p>
 
     <div class="kegiatan-grid">
 
+        <!-- ================================================== -->
+        <!-- 🕌 SHOLAT JUM'AT — PALING ATAS, KEGIATAN UTAMA -->
+        <!-- ================================================== -->
+        <div class="kegiatan-card" style="grid-column: 1 / -1; background: linear-gradient(135deg, #1a5c38, #2d7a50); color: white;">
+            <div class="kegiatan-content">
+                <h3 class="kegiatan-judul" style="color: #fff; font-size:24px;">🕌 SHOLAT JUM'AT — 7 Imam Khotib Rutin</h3>
+                <p class="kegiatan-desc" style="color: #f0f0f0;">Masjid Nurul Ukhuwah memiliki <strong>7 Imam Khotib</strong> yang siap bergantian setiap minggu sesuai jadwal rutin — agar jamaah selalu mendapat ilmu dan pengingat yang beragam.</p>
+                <p style="margin-top:12px; font-weight:bold; color: #ffd700;">📌 Minggu ke-3 Bulan Genap: Ustadz Eko Junianto, SE</p>
+                <video controls preload="metadata">
+                    <source src="VID-20260821-WA0024.mp4" type="video/mp4">
+                    Video Sholat Jum'at — Ustadz Eko Junianto SE
+                </video>
+                <video controls preload="metadata">
+                    <source src="VID-20260821-WA0023.mp4" type="video/mp4">
+                    Video Khotbah Jum'at
+                </video>
+            </div>
+        </div>
+
         <!-- === IQRO' IBU-IBU === -->
         <div class="kegiatan-card">
             <div class="kegiatan-content">
                 <h3 class="kegiatan-judul">📖 Iqro' — Ibu-ibu</h3>
                 <p class="kegiatan-desc">Setiap <strong>Selasa & Jumat</strong> ba'da Ashar — dibimbing oleh Ustadzah. Berawal dari 3 orang, kini telah berkembang menjadi 13 jamaah. Alhamdulillah!</p>
-                <video controls>
+                <video controls preload="metadata">
                     <source src="VID-20260819-WA0012.mp4" type="video/mp4">
                     <source src="VID-20260819-WA0013.mp4" type="video/mp4">
-                    Peramban tidak mendukung pemutaran video.
+                    Video Kegiatan Iqro' Ibu-ibu
                 </video>
-            </div>
-        </div>
-
-        <!-- === KATAM AL-QUR'AN === -->
-        <div class="kegiatan-card">
-            <img src="IMG-20260814-WA0015.jpg" alt="Katam Al-Qur'an" class="kegiatan-img">
-            <div class="kegiatan-content">
-                <h3 class="kegiatan-judul">📖 Katam Al-Qur'an</h3>
+                
+                <h4 style="font-size:19px; color:#1a5c38; margin-top:25px; margin-bottom:10px;">📖 Program Katam Al-Qur'an</h4>
                 <p class="kegiatan-desc">Setiap <strong>Ahad pagi</strong> pukul 09.00 — 10.00 WIB. Membaca Al-Qur'an bersama menuju khatam.</p>
+                <img src="IMG-20260814-WA0015.jpg" alt="Katam Al-Qur'an">
             </div>
         </div>
 
         <!-- ================================================== -->
-        <!-- ✅ 1. PENGAJIAN FIKIH & TAHSINUL QUR'AN — HANYA DI SINI, TIDAK DOBEL -->
+        <!-- 🕌 PENGAJIAN FIKIH & TAHSINUL QUR'AN — 3 VIDEO -->
         <!-- ================================================== -->
         <div class="kegiatan-card">
             <div class="kegiatan-content">
                 <h3 class="kegiatan-judul">🕌 Pengajian Fikih & Tahsinul Qur'an — Bapak-bapak</h3>
                 <p class="kegiatan-desc">Setiap <strong>Malam Kamis</strong> ba'da Maghrib — menjelang Isya. Dibimbing oleh 2 Ustadz yang ikhlas tanpa imbalan. Belajar fikih dasar dan perbaikan bacaan Al-Qur'an.</p>
-                <video controls>
-                    <source src="VID-20260816-WA0007.mp4" type="video/mp4">
+                <video controls preload="metadata">
+                    <source src="VID-20260821-WA0009.mp4" type="video/mp4">
                     Video Pengajian Fikih & Tahsinul Qur'an
+                </video>
+                <video controls preload="metadata">
+                    <source src="VID-20260819-WA0039(1).mp4" type="video/mp4">
+                    Video Pengajian — Ustadz
+                </video>
+                <video controls preload="metadata">
+                    <source src="VID-20260821-WA0012.mp4" type="video/mp4">
+                    Video Pengajian — Tahsinul Qur'an
                 </video>
             </div>
         </div>
 
         <!-- ================================================== -->
-        <!-- ✅ 2. PENGAJIAN UMUM BULANAN — HANYA DI SINI, TIDAK DOBEL -->
+        <!-- 🕌 PENGAJIAN UMUM BULANAN — 1 VIDEO -->
         <!-- ================================================== -->
         <div class="kegiatan-card">
             <div class="kegiatan-content">
-                <h3 class="kegiatan-judul">🕌 Pengajian Umum Bulanan</h3>
+                <h3 class="kegiatan-judul">🕌 Pengajian Umum Bulanan — Ahad Ketiga</h3>
                 <p class="kegiatan-desc">Setiap <strong>Ahad ketiga</strong> ba'da Ashar — terbuka untuk seluruh jamaah dan warga sekitar. Hadir Ustadz/Ustadzah sebagai pembicara.</p>
-                <video controls>
-                    <source src="VID-20260816-WA0004.mp4" type="video/mp4">
+                <video controls preload="metadata">
+                    <source src="VID-20260821-WA0013.mp4" type="video/mp4">
                     Video Pengajian Umum Bulanan
                 </video>
             </div>
         </div>
 
-        <!-- === GOWES === -->
+        <!-- ================================================== -->
+        <!-- 🚲 GOWES BERSAMA — 4 VIDEO + FOTO LAMA TETAP -->
+        <!-- ================================================== -->
         <div class="kegiatan-card">
             <div class="kegiatan-content">
                 <h3 class="kegiatan-judul">🚲 Gowes Bersama — Ahad Pagi</h3>
                 <p class="kegiatan-desc">Setiap <strong>Ahad pagi</strong> ba'da Subuh — rute 30–50 km. Bertujuan untuk kesehatan sekaligus dakwah melalui silaturahmi. Semoga tumbuh menjadi jamaah masjid yang aktif!</p>
+                
                 <img src="IMG-20260719-WA0008.jpg" alt="Persiapan Start">
-                <video controls>
-                    <source src="VID-20260818-WA0014.mp4" type="video/mp4">
-                    Video Persiapan Start
+                <video controls preload="metadata">
+                    <source src="VID-20260719-WA0010.mp4" type="video/mp4">
+                    Video Persiapan & Perjalanan
                 </video>
+                
+                <h4 style="font-size:17px; color:#1a5c38; margin-top:15px; margin-bottom:8px;">📖 Tilawah saat Rehat</h4>
+                <video controls preload="metadata">
+                    <source src="VID-20260809-WA0004.mp4" type="video/mp4">
+                    Video Tilawah saat Rehat Gowes
+                </video>
+                
+                <h4 style="font-size:17px; color:#1a5c38; margin-top:15px; margin-bottom:8px;">🍽️ Sarapan Bersama</h4>
+                <video controls preload="metadata">
+                    <source src="VID-20260719-WA0012.mp4" type="video/mp4">
+                    Video Sarapan Bersama
+                </video>
+                
                 <img src="IMG-20260719-WA0009.jpg" alt="Titik Nol">
                 <img src="IMG-20260719-WA0005(1).jpg" alt="Arah Proliman menuju PLTU">
-                <video controls>
-                    <source src="VID-20260818-WA0012.mp4" type="video/mp4">
-                    Video Arah Pulang
+                
+                <video controls preload="metadata">
+                    <source src="VID-20260719-WA0011.mp4" type="video/mp4">
+                    Video Gowes Bersama — Pulang
                 </video>
-                <video controls>
-                    <source src="VID-20260818-WA0013.mp4" type="video/mp4">
-                    Video Gowes Bersama
-                </video>
+                
                 <img src="IMG-20260719-WA0006.jpg" alt="Makan bersama di GOR">
                 <img src="IMG-20260719-WA0007.jpg" alt="Bersepeda bersama">
             </div>
         </div>
 
         <!-- ================================================== -->
-        <!-- ✅ 3. KEGIATAN RAMADHAN — TIDAK DOBEL, URUTAN BENAR -->
+        <!-- 🕌 GSSB — GERAK SHOLAT SUBUH BERJAMAAH -->
+        <!-- ================================================== -->
+        <div class="kegiatan-card">
+            <div class="kegiatan-content">
+                <h3 class="kegiatan-judul">🕌 GSSB — Gerak Sholat Subuh Berjamaah</h3>
+                <p class="kegiatan-desc">Mengajak untuk tetap konsisten dan semangat melaksanakan sholat Subuh berjamaah — keutamaan yang besar pahalanya. Semoga semakin ramai jamaah setiap harinya!</p>
+                <video controls preload="metadata">
+                    <source src="VID-20260821-WA0016.mp4" type="video/mp4">
+                    Video Gerak Sholat Subuh Berjamaah
+                </video>
+            </div>
+        </div>
+
+        <!-- ================================================== -->
+        <!-- 🌙 KEGIATAN RAMADHAN — 6 VIDEO -->
         <!-- ================================================== -->
         <div class="kegiatan-card">
             <div class="kegiatan-content">
                 <h3 class="kegiatan-judul">🌙 Kegiatan Ramadhan</h3>
-                <p class="kegiatan-desc"><strong>• Pengajian Umum 4x setiap Ahad</strong> ba'da Ashar + pembagian nasi kotak buka puasa</p>
                 
-                <!-- ✅ TILAWAH & PENGAJIAN RAMADHAN — DI ATAS TARAWIH -->
-                <p class="kegiatan-desc"><strong>• Tilawah & Pengajian Ramadhan</strong></p>
-                <video controls>
-                    <source src="VID-20260816-WA0004.mp4" type="video/mp4">
-                    Video Tilawah & Pengajian Ramadhan
+                <p class="kegiatan-desc"><strong>• Pengajian Umum 4x setiap Ahad</strong> ba'da Ashar + pembagian nasi kotak buka puasa</p>
+                <video controls preload="metadata">
+                    <source src="VID-20260821-WA0017.mp4" type="video/mp4">
+                    Video Pengajian Umum Ramadhan — Ahad 1
+                </video>
+                <video controls preload="metadata">
+                    <source src="VID-20260821-WA0018.mp4" type="video/mp4">
+                    Video Pengajian Umum Ramadhan — Ahad 2
+                </video>
+                <video controls preload="metadata">
+                    <source src="VID-20260821-WA0021.mp4" type="video/mp4">
+                    Video Pengajian Umum Ramadhan — Ahad 3 & 4
                 </video>
                 
-                <!-- ✅ TARAWIH & KULTUM SUBUH -->
-                <p class="kegiatan-desc"><strong>• Tarawih & Kultum Subuh</strong></p>
-                <video controls>
-                    <source src="VID-20260816-WA0007.mp4" type="video/mp4">
+                <p class="kegiatan-desc" style="margin-top:20px;"><strong>• Tarawih & Kultum Subuh</strong></p>
+                <video controls preload="metadata">
+                    <source src="VID-20260821-WA0015.mp4" type="video/mp4">
                     Video Tarawih & Kultum Subuh
                 </video>
                 
-                <!-- ✅ I'TIKAF -->
-                <p class="kegiatan-desc"><strong>• I'tikaf 10 hari terakhir</strong></p>
-                <video controls>
+                <p class="kegiatan-desc" style="margin-top:20px;"><strong>• I'tikaf 10 hari terakhir</strong></p>
+                <video controls preload="metadata">
                     <source src="VID-20260815-WA0029.mp4" type="video/mp4">
                     Video I'tikaf
                 </video>
                 
-                <p class="kegiatan-desc"><strong>• Buka Puasa Bersama Pengurus</strong></p>
+                <p class="kegiatan-desc" style="margin-top:20px;"><strong>• Buka Puasa Bersama Pengurus</strong></p>
+                <video controls preload="metadata">
+                    <source src="VID-20260821-WA0014.mp4" type="video/mp4">
+                    Video Buka Puasa Bersama Pengurus
+                </video>
             </div>
         </div>
 
-        <!-- === IDUL ADHA === -->
+        <!-- ================================================== -->
+        <!-- 🔧 PERAWATAN & PERBAIKAN MASJID -->
+        <!-- ================================================== -->
+        <div class="kegiatan-card">
+            <div class="kegiatan-content">
+                <h3 class="kegiatan-judul">🔧 Perawatan & Perbaikan Masjid</h3>
+                <p class="kegiatan-desc">Menjaga kebersihan, keindahan, dan kelayakan masjid — menjadi tanggung jawab bersama. Semoga setiap usaha pemeliharaan menjadi amal jariyah yang pahalanya terus mengalir.</p>
+                <video controls preload="metadata">
+                    <source src="VID-20260821-WA0019.mp4" type="video/mp4">
+                    Video Perawatan & Perbaikan Masjid
+                </video>
+            </div>
+        </div>
+
+        <!-- === PENYALURAN PARCEL IDUL FITRI === -->
+        <div class="kegiatan-card">
+            <div class="kegiatan-content">
+                <h3 class="kegiatan-judul">📦 Penyaluran Parcel Idul Fitri</h3>
+                <p class="kegiatan-desc">Berbagi kebersamaan dan kebahagiaan kepada warga sekitar masjid — semoga menjadi amal jariyah yang terus mengalir pahalanya.</p>
+                <video controls preload="metadata">
+                    <source src="VID-20260817-WA0005.mp4" type="video/mp4">
+                    Video Penyaluran Parcel Idul Fitri
+                </video>
+            </div>
+        </div>
+
+        <!-- === IDUL ADHA — JULEHA BERSERTIFIKAT === -->
         <div class="kegiatan-card">
             <div class="kegiatan-content">
                 <h3 class="kegiatan-judul">🐏 Qurban — Juleha Bersertifikat</h3>
@@ -334,34 +431,6 @@
                 <img src="IMG-20260817-WA0038.jpg" alt="Pembagian Daging Qurban">
                 <img src="IMG-20260817-WA0037.jpg" alt="Pembagian Daging Qurban">
                 <img src="IMG-20260817-WA0036.jpg" alt="Pembagian Daging Qurban">
-            </div>
-        </div>
-
-        <!-- === PENYALURAN PARCEL IDUL FITRI === -->
-        <div class="kegiatan-card">
-            <div class="kegiatan-content">
-                <h3 class="kegiatan-judul">📦 Penyaluran Parcel Idul Fitri</h3>
-                <p class="kegiatan-desc">Berbagi kebersamaan dan kebahagiaan kepada warga sekitar masjid — semoga menjadi amal jariyah yang terus mengalir pahalanya.</p>
-                <video controls>
-                    <source src="VID-20260817-WA0005.mp4" type="video/mp4">
-                    Video Penyaluran Parcel Idul Fitri
-                </video>
-            </div>
-        </div>
-
-        <!-- === RUTINITAS BA'DA MAGHRIB & SUBUH === -->
-        <div class="kegiatan-card">
-            <div class="kegiatan-content">
-                <h3 class="kegiatan-judul">✨ Rutinitas Ba'da Sholat</h3>
-                <p class="kegiatan-desc">Ba'da Maghrib hingga menjelang Isya, serta ba'da Subuh hingga sebelum Syuruk — zikir, tilawah, dan doa bersama. Semoga masjid semakin ramai dan makmur!</p>
-                <video controls>
-                    <source src="VID-20260819-WA0004.mp4" type="video/mp4">
-                    Video Ba'da Maghrib
-                </video>
-                <video controls>
-                    <source src="VID-20260819-WA0006.mp4" type="video/mp4">
-                    Video Ba'da Subuh
-                </video>
             </div>
         </div>
 
