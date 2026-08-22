@@ -83,7 +83,6 @@
             text-align: justify;
         }
         .card h3 { text-align: center; font-size: 24px; color: #1a5c38; margin-bottom: 20px; font-weight: bold; text-transform: uppercase; }
-        .card p { margin-bottom: 15px; font-size: 18px; line-height: 1.8; }
 
         .agenda-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 25px; }
         @media(max-width:900px) { .agenda-grid { grid-template-columns: 1fr; } }
@@ -190,8 +189,34 @@
             font-weight: bold; 
         }
 
-        footer { background: #1a5c38; color: white; padding: 40px 25px; text-align: center; margin-top: 60px; }
-        .footer-ayat { font-size: 17px; font-style: italic; max-width: 800px; margin: 0 auto 20px; opacity: 0.9; }
+        .penutup {
+            text-align: center;
+            padding: 50px 25px;
+            background: linear-gradient(to bottom, #f9f6f0, #fff);
+            border-radius: 12px;
+            margin: 40px 25px;
+        }
+        .penutup h3 {
+            font-size: 24px;
+            color: #1a5c38;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .penutup p {
+            font-size: 18px;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        .penutup .aamiin {
+            font-size: 22px;
+            color: #c19a3b;
+            font-weight: bold;
+            margin-top: 25px;
+        }
+
+        footer { background: #1a5c38; color: white; padding: 30px 25px; text-align: center; margin-top: 20px; }
         .footer-info { font-size: 16px; line-height: 1.8; }
 
         section { scroll-margin-top: 90px; }
@@ -234,7 +259,7 @@
 <section style="background:white; padding:20px 0;">
     <div class="container" style="padding-bottom:0; padding-top:10px;">
         <h2 class="section-title">KEHIDUPAN MASJID KAMI</h2>
-        <p style="text-align:center; color:#666; margin-bottom:25px;">Masjid ini terus hidup — setiap hari ada kegiatan, ada jamaah, ada kebaikan yang berjalan.</p>
+        <p style="text-align:center; font-size:18px; color:#666; margin-bottom:25px;">Masjid ini terus hidup — setiap hari ada kegiatan, ada jamaah, ada kebaikan yang berjalan.</p>
         <div class="galeri-beranda">
             <img src="IMG-20260819-WA0018.jpg" alt="Tim Juleha Qurban">
             <img src="IMG-20260719-WA0008.jpg" alt="Gowes Bersama">
@@ -591,31 +616,29 @@
     </div>
 </section>
 
-<section id="dukung" style="padding:60px 25px;">
+<!-- 📞 KONTAK & PENGURUS -->
+<section id="kontak" style="background:white; padding:60px 25px;">
     <div class="container" style="padding:0;">
-        <h2 class="section-title">DUKUNG KEMAKMURAN MASJID</h2>
-        <div class="donasi-box">
-            <p style="font-size:19px; margin-bottom:25px; line-height:1.8;">
-                Setiap kebaikan di Masjid Nurul Ukhuwah — dari sholat berjamaah, pengajian, kebersihan, hingga fasilitas yang terawat — berkat infak dan sedekah jamaah yang tulus.
-            </p>
-            <p style="font-size:18px; margin-bottom:25px; line-height:1.8;">
-                🫙 <strong>INFAK KALENG</strong> → pemeliharaan, pengadaan, penggantian fasilitas<br>
-                🕌 <strong>INFAK JUMAT</strong> → kilafah Imam Khotib, kegiatan pengajian, kebersihan
-            </p>
-            <p style="font-size:18px; margin-bottom:25px; line-height:1.8;">
-                Ke depannya kami ingin meningkatkan kemakmuran masjid lebih luas. Setiap donasi akan dialokasikan untuk:
-            </p>
-            <ul style="text-align:left; max-width:600px; margin:0 auto 25px; font-size:17px; line-height:2;">
-                <li>✅ Dukungan untuk Ustadz, Ustadzah, dan pengajar</li>
-                <li>✅ Kegiatan dakwah dan pendidikan umat</li>
-                <li>✅ Perawatan & perbaikan fasilitas masjid</li>
-                <li>✅ Renovasi & pengembangan ke depan</li>
-                <li>✅ Kebersihan & kebutuhan operasional</li>
-            </ul>
-            <p style="font-size:18px; margin-bottom:25px; line-height:1.8;">
-                Semoga setiap rupiah menjadi amal jariyah yang pahalanya tidak pernah putus. Aamiin 🤲
-            </p>
-            <div class="rekening">
-                🏦 BANK SYARIAH INDONESIA (BSI)<br>
-                NO. REKENING: 7205811871<br>
-                A.N. MASJID NURUL UKHUWA
+        <h2 class="section-title">KONTAK & PENGURUS MASJID</h2>
+        <p style="text-align:center; font-size:18px; color:#666; margin-bottom:40px;">Ingin berkunjung, bertanya, atau berpartisipasi? Silakan hubungi kami — kami senang menyambut Anda</p>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:30px; max-width:900px; margin:0 auto;">
+            
+            <!-- 📍 ALAMAT & LOKASI -->
+            <div class="card" style="text-align:center;">
+                <h3>ALAMAT MASJID</h3>
+                <p style="font-size:18px; line-height:2; text-align:center;">
+                    <strong>MASJID NURUL UKHUWAH</strong><br>
+                    Jl. Kutilang Barat<br>
+                    RT 01 RW XI, Kelurahan Donan<br>
+                    Kecamatan Cilacap Tengah<br>
+                    Kabupaten Cilacap, Jawa Tengah<br>
+                    📮 Kode Pos: 53222
+                </p>
+                <a href="https://maps.google.com/maps?q=Masjid+Nurul+Ukhuwah+IKADI+Donan+Cilacap,+Jawa+Tengah" target="_blank" style="display:inline-block; background:#c19a3b; color:white; padding:12px 25px; border-radius:8px; text-decoration:none; font-weight:bold; margin-top:15px;">🔗 BUKA DI GOOGLE MAPS</a>
+            </div>
+
+            <!-- 📞 KONTAK & EMAIL -->
+            <div class="card" style="text-align:center;">
+                <h3>HUBUNGI KAMI</h3>
+                <p style="font-size:18px; line
