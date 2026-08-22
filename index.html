@@ -175,8 +175,13 @@
 
         .kontak-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; max-width: 900px; margin: 0 auto; }
         @media(max-width:768px) { .kontak-grid { grid-template-columns: 1fr; } }
-        .pengurus-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; max-width: 700px; margin: 30px auto 0; text-align: center; }
-        @media(max-width:600px) { .pengurus-grid { grid-template-columns: 1fr; } }
+        .pengurus-list { list-style: none; padding: 0; margin-top: 20px; text-align: center; }
+        .pengurus-list li { padding: 12px 0; font-size: 18px; border-bottom: 1px dashed #ddd; }
+        .pengurus-list li:last-child { border-bottom: none; }
+        .pengurus-nama { font-weight: bold; color: #1a5c38; font-size: 19px; }
+        .pengurus-jabatan { color: #c19a3b; font-size: 16px; font-weight: 600; }
+        .wa-link { color: #1a5c38; text-decoration: none; display: inline-block; margin-top: 5px; }
+        .wa-link:hover { color: #c19a3b; text-decoration: underline; }
 
         .donasi-box { 
             background: linear-gradient(135deg, #1a5c38, #2d7a50); 
@@ -184,6 +189,8 @@
             padding: 35px; 
             border-radius: 12px; 
             text-align: center; 
+            max-width: 700px;
+            margin: 0 auto;
         }
         .rekening { 
             background: rgba(255,255,255,0.15); 
@@ -193,6 +200,7 @@
             font-size: 20px; 
             font-weight: bold; 
         }
+        .donasi-desc { font-size: 17px; line-height: 1.8; margin-bottom: 20px; }
 
         .penutup {
             text-align: center;
@@ -613,8 +621,8 @@
 
                 <hr style="border:none; border-top:2px dashed #ddd; margin:30px 0;">
 
-                <h4 style="font-size:20px; color:#1a5c38; margin-bottom:15px; text-transform:uppercase;">PEMBAGIAN UNTUK WARGA SEKITAR — ADIL & MERATA</h4>
-                <p style="margin-bottom:10px;">Sisa daging qurban dibagikan kepada warga sekitar dengan prinsip adil dan merata. Semoga menjadi berkah bagi setiap keluarga.</p>
+                <h4 style="font-size:20px; color:#1a5c38; margin-bottom:15px; text-transform:uppercase;">PELAYANAN QURBAN UNTUK SHOHIBUL DAN WARGA SEKITAR</h4>
+                <p style="margin-bottom:10px;">Setelah pelayanan untuk <em>Shohibul Qurban</em> aman, berlanjut pelayanan untuk warga sekitarnya dengan adil dan merata. Semoga setiap bagian yang diterima menjadi berkah bagi setiap keluarga.</p>
                 <p style="font-weight:bold; color:#1a5c38; margin-top:15px; text-transform:uppercase;">📌 PROGRAM TABUNGAN QURBAN TERSEDIA SETIAP SAAT — HUBUNGI PENGURUS</p>
             </div>
         </div>
@@ -631,13 +639,4 @@
         <div class="kontak-grid">
             <div class="card" style="text-align:center;">
                 <h3>ALAMAT MASJID</h3>
-                <p style="font-size:18px; line-height:2; text-align:center;">
-                    <strong>MASJID NURUL UKHUWAH</strong><br>
-                    Jl. Kutilang Barat<br>
-                    RT 01 RW XI, Kelurahan Donan<br>
-                    Kecamatan Cilacap Tengah<br>
-                    Kabupaten Cilacap, Jawa Tengah<br>
-                    📮 Kode Pos: 53222
-                </p>
-                <a href="https://maps.google.com/maps?q=Masjid+Nurul+Ukhuwah+IKADI+Donan+Cilacap,+Jawa+Tengah" target="_blank" class="lokasi-btn">🔗 BUKA DI GOOGLE MAPS</a>
-            </div>
+                <p style="font
