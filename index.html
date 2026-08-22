@@ -173,6 +173,11 @@
         }
         .highlight-box h4 { font-size: 20px; color: #1a5c38; margin-bottom: 12px; font-weight: bold; text-transform: uppercase; }
 
+        .kontak-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; max-width: 900px; margin: 0 auto; }
+        @media(max-width:768px) { .kontak-grid { grid-template-columns: 1fr; } }
+        .pengurus-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; max-width: 700px; margin: 30px auto 0; text-align: center; }
+        @media(max-width:600px) { .pengurus-grid { grid-template-columns: 1fr; } }
+
         .donasi-box { 
             background: linear-gradient(135deg, #1a5c38, #2d7a50); 
             color: white; 
@@ -201,6 +206,7 @@
             color: #1a5c38;
             font-weight: bold;
             margin-bottom: 20px;
+            text-transform: uppercase;
         }
         .penutup p {
             font-size: 18px;
@@ -622,9 +628,7 @@
         <h2 class="section-title">KONTAK & PENGURUS MASJID</h2>
         <p style="text-align:center; font-size:18px; color:#666; margin-bottom:40px;">Ingin berkunjung, bertanya, atau berpartisipasi? Silakan hubungi kami — kami senang menyambut Anda</p>
 
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:30px; max-width:900px; margin:0 auto;">
-            
-            <!-- 📍 ALAMAT & LOKASI -->
+        <div class="kontak-grid">
             <div class="card" style="text-align:center;">
                 <h3>ALAMAT MASJID</h3>
                 <p style="font-size:18px; line-height:2; text-align:center;">
@@ -635,10 +639,5 @@
                     Kabupaten Cilacap, Jawa Tengah<br>
                     📮 Kode Pos: 53222
                 </p>
-                <a href="https://maps.google.com/maps?q=Masjid+Nurul+Ukhuwah+IKADI+Donan+Cilacap,+Jawa+Tengah" target="_blank" style="display:inline-block; background:#c19a3b; color:white; padding:12px 25px; border-radius:8px; text-decoration:none; font-weight:bold; margin-top:15px;">🔗 BUKA DI GOOGLE MAPS</a>
+                <a href="https://maps.google.com/maps?q=Masjid+Nurul+Ukhuwah+IKADI+Donan+Cilacap,+Jawa+Tengah" target="_blank" class="lokasi-btn">🔗 BUKA DI GOOGLE MAPS</a>
             </div>
-
-            <!-- 📞 KONTAK & EMAIL -->
-            <div class="card" style="text-align:center;">
-                <h3>HUBUNGI KAMI</h3>
-                <p style="font-size:18px; line
