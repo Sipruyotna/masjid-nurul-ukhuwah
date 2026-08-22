@@ -104,30 +104,43 @@
             background: #000;
         }
         img { max-width: 100%; border-radius: 8px; margin: 12px 0; }
-        iframe { max-width: 100%; border-radius: 8px; margin: 12px 0; }
 
-        .tiktok-container {
-            position: relative;
-            width: 100%;
-            max-width: 500px;
-            margin: 20px auto;
-            padding-bottom: 177.78%;
-            height: 0;
-            overflow: hidden;
+        .tiktok-link-box {
+            text-align: center;
+            margin: 25px 0;
+            padding: 25px;
+            background: #f0f7f3;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border: 2px solid #1a5c38;
         }
-        .tiktok-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
+        .tiktok-btn {
+            display: inline-block;
+            background: #000;
+            color: white;
+            padding: 14px 30px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 10px;
         }
+        .tiktok-btn:hover { background: #333; }
 
-        .donasi-box { background: linear-gradient(135deg, #1a5c38, #2d7a50); color: white; padding: 35px; border-radius: 12px; text-align: center; }
-        .rekening { background: rgba(255,255,255,0.15); padding: 20px; border-radius: 8px; margin: 15px 0; font-size: 20px; font-weight: bold; }
+        .donasi-box { 
+            background: linear-gradient(135deg, #1a5c38, #2d7a50); 
+            color: white; 
+            padding: 35px; 
+            border-radius: 12px; 
+            text-align: center; 
+        }
+        .rekening { 
+            background: rgba(255,255,255,0.15); 
+            padding: 20px; 
+            border-radius: 8px; 
+            margin: 15px 0; 
+            font-size: 20px; 
+            font-weight: bold; 
+        }
 
         footer { background: #1a5c38; color: white; padding: 40px 25px; text-align: center; margin-top: 60px; }
         .footer-ayat { font-size: 17px; font-style: italic; max-width: 800px; margin: 0 auto 20px; opacity: 0.9; }
@@ -135,6 +148,8 @@
 
         section { scroll-margin-top: 90px; }
         .highlight-box { background: #f0f7f3; border-left: 4px solid #1a5c38; padding: 20px; border-radius: 8px; margin: 20px 0; }
+        .alokasi-list { text-align: left; max-width: 700px; margin: 20px auto; }
+        .alokasi-list li { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.2); font-size: 17px; }
     </style>
 </head>
 <body>
@@ -206,7 +221,7 @@
 
 <section id="tentang" style="background:white; padding:60px 0;">
     <div class="container" style="padding-top:20px; padding-bottom:20px;">
-        <h2 class="section-title" style="margin-bottom:25px;">Tentang Masjid Nurul Ukhuwah</h2>
+        <h2 class="section-title">Tentang Masjid Nurul Ukhuwah</h2>
         <div class="card" style="max-width:900px; margin:0 auto 40px;">
             <p style="font-size:18px; margin-bottom:20px; text-align:justify; line-height:1.8;">
                 <strong>Masjid Nurul Ukhuwah</strong> berdiri pada tahun <strong>2008</strong> oleh <strong>IKADI (Ikatan Dai Indonesia)</strong>, didirikan atas bantuan dana dari Uni Emirat Arab. <strong>Masyarakat luas & sekitar lebih mengenal masjid ini sebagai Masjid IKADI.</strong>
@@ -273,6 +288,11 @@
             <div class="kegiatan-content">
                 <h3 class="kegiatan-judul">📖 Iqro' — Ibu-ibu</h3>
                 <p class="kegiatan-desc">Setiap <strong>Selasa & Jumat</strong> ba'da Ashar — dibimbing oleh Ustadzah. Berawal dari 3 orang, kini telah berkembang menjadi 13 jamaah. Alhamdulillah!</p>
+                
+                <!-- 📸 FOTO TERBARU IQRO' JUMAT -->
+                <img src="IMG-20260821-WA0027(1).jpg" alt="Kegiatan Iqro' Ibu-ibu — Jumat">
+                <img src="IMG-20260821-WA0028(1).jpg" alt="Kegiatan Iqro' Ibu-ibu — Jumat">
+                
                 <video controls preload="metadata">
                     <source src="VID-20260819-WA0012.mp4" type="video/mp4">
                     <source src="VID-20260819-WA0013.mp4" type="video/mp4">
@@ -417,7 +437,7 @@
             </div>
         </div>
 
-        <!-- 🔧 PERAWATAN & PERBAIKAN FASILITAS — BAGIAN TERPISAH, BUKAN HANYA QURBAN -->
+        <!-- 🔧 PERAWATAN & PERBAIKAN FASILITAS — BAGIAN TERPISAH -->
         <div class="kegiatan-card">
             <div class="kegiatan-content">
                 <h3 class="kegiatan-judul">🔧 Perawatan & Perbaikan Fasilitas Masjid</h3>
@@ -442,7 +462,7 @@
 
                 <hr style="border:none; border-top:2px dashed #ddd; margin:30px 0;">
 
-                <!-- 📜 TIM PENYEMBELIH BERSERTIFIKAT — DIATAS! -->
+                <!-- 📜 TIM PENYEMBELIH BERSERTIFIKAT — DI ATAS! -->
                 <h4 style="font-size:20px; color:#1a5c38; margin-bottom:15px;">📜 Tim Penyembelih Bersertifikat Juleha</h4>
                 <p style="margin-bottom:15px;"><strong>Dengan izin Allah, proses penyembelihan selama ini kami tangani sendiri.</strong> Alhamdulillah, kami telah terlatih dan bersertifikat Juleha. Demi pelayanan terbaik sesuai syariat Islam, seluruh tim penyembelih Masjid Nurul Ukhuwah telah mengikuti pelatihan khusus dan memperoleh sertifikasi resmi. Kami belajar dengan sungguh-sungguh: cara mengikat, merobohkan, dan menyembelih dengan lembut namun tepat — sehingga hewan tidak tersakiti, darah terkuras habis, dan daging menjadi lebih segar serta terasa lebih manis. Kami juga mempersiapkan alat yang memadai — dari tali yang tepat hingga bilah yang sangat tajam. Inilah komitmen kami: melayani dengan ilmu, dengan ketelitian, dan dengan penuh penghormatan terhadap hewan qurban.</p>
                 <img src="IMG-20260819-WA0018.jpg" alt="Tim Penyembelih Juleha Bersertifikat">
@@ -462,15 +482,13 @@
 
                 <hr style="border:none; border-top:1px solid #eee; margin:25px 0;">
 
-                <!-- ⚔️ PENYEMBELIHAN — TIKTOK EMBED BENAR -->
+                <!-- ⚔️ PENYEMBELIHAN — TOMBOL LINK TIKTOK -->
                 <h4 style="font-size:20px; color:#1a5c38; margin-bottom:15px;">⚔️ Perobohan & Penyembelihan — Teknik Juleha</h4>
                 <p style="margin-bottom:15px;">Dengan tim yang sudah terlatih dan bersertifikat, kami melaksanakan penyembelihan dengan tenang, tepat, dan sesuai syariat — menggunakan teknik yang dipelajari dalam pelatihan Juleha.</p>
-                <div class="tiktok-container">
-                    <iframe 
-                        src="https://www.tiktok.com/embed/v2/ZSVfyT4ha/" 
-                        allowfullscreen
-                        loading="lazy">
-                    </iframe>
+                <div class="tiktok-link-box">
+                    <p style="font-size:18px; margin-bottom:10px; font-weight:bold;">🎬 Video Penyembelihan — Teknik Juleha</p>
+                    <p style="font-size:16px; margin-bottom:15px;">Klik tombol di bawah untuk menonton video penyembelihan di TikTok:</p>
+                    <a href="https://vt.tiktok.com/ZSVfyT4ha/" target="_blank" class="tiktok-btn">▶️ Buka Video di TikTok</a>
                 </div>
 
                 <hr style="border:none; border-top:1px solid #eee; margin:25px 0;">
@@ -541,25 +559,13 @@
     </div>
 </section>
 
-<section id="kontak" style="background:white; padding:60px 0;">
-    <div class="container">
-        <h2 class="section-title">Kontak & Pengurus Masjid</h2>
-        <div class="agenda-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
-            <div class="agenda-card">
-                <h3 class="agenda-title">👤 Ketua</h3>
-                <p><strong>Sulistiyono</strong><br>📱 WA: +62 813-2753-0681</p>
-            </div>
-            <div class="agenda-card">
-                <h3 class="agenda-title">👤 Sekretaris</h3>
-                <p><strong>Supriyatno</strong><br>📱 WA: +62 838-7260-5334</p>
-            </div>
-            <div class="agenda-card">
-                <h3 class="agenda-title">👤 Pengurus</h3>
-                <p><strong>Aditia Nugroho</strong><br>📱 WA: +62 813-1150-9584</p>
-            </div>
-        </div>
-        <div class="card" style="max-width:700px; margin:40px auto 0; text-align:center;">
-            <h3 style="color:#1a5c38; margin-bottom:20px;">📬 Hubungi Kami</h3>
-            <p style="font-size:19px; margin-bottom:10px;">📍 Jl. Kutilang Barat, RT 01 RW XI, Kel. Donan, Cilacap Tengah, Jawa Tengah — 53222</p>
-            <p style="font-size:17px; margin-bottom:10px;">📧 Email: <a href="mailto:nurulukhuwahmasjid@gmail.com" style="color:#1a5c38; text-decoration:none;">nurulukhuwahmasjid@gmail.com</a></p>
-            <p style="font-size:15px; color:#666; margin-top:10px;">🆔
+<section id="dukung" style="padding:60px 25px;">
+    <div class="container" style="padding:0;">
+        <h2 class="section-title">💚 Dukung Kemakmuran Masjid</h2>
+        <div class="donasi-box">
+            <p style="font-size:19px; margin-bottom:25px; line-height:1.8;">
+                Setiap kebaikan yang berjalan di Masjid Nurul Ukhuwah — dari sholat berjamaah, pengajian anak-anak hingga bapak-ibu, kebersihan yang terjaga, fasilitas yang terawat, hingga acara-acara yang menyatukan kita — semuanya berkat infak dan sedekah jamaah yang tulus.
+            </p>
+            <p style="font-size:18px; margin-bottom:25px; line-height:1.8;">
+                Alhamdulillah, selama ini pemasukan masjid berasal dari:<br>
+                🫙 <strong>Infak Kaleng</strong> — untuk pemeliharaan rutin, pengadaan barang, dan penggantian fasilitas<br>
